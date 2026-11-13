@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "89cfa96d-b094-47e7-a6dd-1eaed86c5df8",
+  "name": "Character Select",
+  "symbol": "bg_character_select",
+  "tileColors": "",
+  "filename": "Character Select.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

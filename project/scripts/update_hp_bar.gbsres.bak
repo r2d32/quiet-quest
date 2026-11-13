@@ -1,0 +1,607 @@
+{
+  "_resourceType": "script",
+  "id": "b5891c97-be7c-4d3d-8a0a-c08bffdf8295",
+  "name": "Update_HP_Bar",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Param_Current_HP",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "Param_Max_HP",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "Param_Displayed_Pixels",
+      "passByReference": true
+    },
+    "V3": {
+      "id": "V3",
+      "name": "Param_Start_X",
+      "passByReference": false
+    },
+    "V4": {
+      "id": "V4",
+      "name": "Param_Bar_Y",
+      "passByReference": false
+    }
+  },
+  "actors": {},
+  "symbol": "script_4",
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": true,
+        "__label": "Rule of 3rd HP to Pixels and ensure it does not round to 0"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "33",
+              "value": {
+                "type": "variable",
+                "value": "V0"
+              },
+              "__collapse": true
+            },
+            "id": "34d108cd-fcb2-49da-9828-97235e4cfc97"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "33",
+              "value": {
+                "type": "mul",
+                "valueA": {
+                  "type": "variable",
+                  "value": "33"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 48
+                }
+              },
+              "__collapse": true
+            },
+            "id": "7fe8f131-ef51-43f9-9826-26d8c817cb6e"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "33",
+              "value": {
+                "type": "div",
+                "valueA": {
+                  "type": "variable",
+                  "value": "33"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "V1"
+                }
+              },
+              "__collapse": true
+            },
+            "id": "12fa0d37-1630-481b-815c-c2fd5bfc784a"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "expression",
+                "value": "$V0$ > 0 && $33$ == 0"
+              },
+              "__collapseElse": true,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "33",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "84e7c560-e7fc-4146-8a26-5eec3a19f3fd"
+                }
+              ],
+              "false": []
+            },
+            "id": "30993dfc-0b94-42ee-a903-01099e10ada7"
+          }
+        ]
+      },
+      "id": "bcec862c-5c40-421d-a45c-20980cc35ed0"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": false,
+        "__label": "Start the sliding loop and calculate X position"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_LOOP_WHILE",
+            "args": {
+              "condition": {
+                "type": "ne",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V2"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "33"
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Step 1 Pixel Toward the Target",
+                    "__collapse": true
+                  },
+                  "id": "ac7a8a08-ad3d-4e73-8dee-b4da4ce24cff"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gt",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "V2"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "33"
+                      }
+                    },
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "V2",
+                          "value": {
+                            "type": "expression",
+                            "value": "$V2$-1"
+                          },
+                          "__collapse": false
+                        },
+                        "id": "85ce40a3-69d4-4da9-a8db-094c8a9c7834"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "36",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "__collapse": false
+                        },
+                        "id": "c2024be3-ef86-4fbf-9822-0efa68fd1600"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "V2",
+                          "value": {
+                            "type": "expression",
+                            "value": "$V2$+1"
+                          },
+                          "__collapse": false
+                        },
+                        "id": "2c001f3e-ed1e-4a6b-9275-219e9f8ca1c2"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "36",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "__collapse": false
+                        },
+                        "id": "e0bf3afc-ceb2-4f2e-9b1c-d5dfabc94058"
+                      }
+                    ]
+                  },
+                  "id": "6af85f03-2cad-4469-a1b6-33d61824e4bb"
+                },
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Calculate which tile X position is changing",
+                    "__collapse": false
+                  },
+                  "id": "c97ccf5c-ea4b-4dbd-bd1a-d86684739e1b"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "34",
+                    "value": {
+                      "type": "variable",
+                      "value": "V2"
+                    },
+                    "__collapse": false
+                  },
+                  "id": "3bd9bbec-d093-4ba0-bf14-9d1114a1aae2"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "34",
+                    "value": {
+                      "type": "div",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "34"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 8
+                      }
+                    },
+                    "__collapse": false
+                  },
+                  "id": "3c27d0e5-3d48-49d0-b774-144357c3436c"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gt",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "34"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 5
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "34",
+                          "value": {
+                            "type": "number",
+                            "value": 5
+                          },
+                          "__collapse": false
+                        },
+                        "id": "c9e9a765-15f3-4dd2-be62-bd8942e04609"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "617d32e2-9625-4f12-9d7b-dd008579fef9"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "34",
+                    "value": {
+                      "type": "add",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "34"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "V3"
+                      }
+                    },
+                    "__collapse": false
+                  },
+                  "id": "04f33d6b-c769-4465-a4ca-757f2fafe819"
+                },
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Calculate Tile Frame & Redraw",
+                    "__collapse": false
+                  },
+                  "id": "9ff76b7a-6c61-4463-ac60-b70253f64686"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "35",
+                    "value": {
+                      "type": "variable",
+                      "value": "V2"
+                    },
+                    "__collapse": false
+                  },
+                  "id": "18112aee-f674-41e2-9832-6defbf6ce371"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "35",
+                    "value": {
+                      "type": "mod",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "35"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 8
+                      }
+                    },
+                    "__collapse": false
+                  },
+                  "id": "2e4b0a8e-8254-46e3-99fb-b3da8510f118"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "35"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COMMENT",
+                        "args": {
+                          "text": "Why: Multiples of 8 (48, 40, 32, 24, 16, 8, 0) have a remainder of 0 and need special handling at tile edges, whereas 1–7 follow a simple flip formula in the Else branch.",
+                          "__collapse": true
+                        },
+                        "id": "338e4caa-2ee2-4cfa-be95-600db803ed03"
+                      },
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "V2"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 48
+                            }
+                          },
+                          "__collapseElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "35",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                },
+                                "__collapse": false
+                              },
+                              "id": "779d8c14-1d9c-41de-991c-9bc3aa1bb1bb"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "V2"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 0
+                                  }
+                                },
+                                "__collapseElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "35",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 8
+                                      }
+                                    },
+                                    "id": "f83f2348-a9cf-4eef-a6aa-2ef220bea959"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "expression",
+                                        "value": "$36$==1"
+                                      },
+                                      "__collapseElse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "34",
+                                            "value": {
+                                              "type": "sub",
+                                              "valueA": {
+                                                "type": "variable",
+                                                "value": "34"
+                                              },
+                                              "valueB": {
+                                                "type": "number",
+                                                "value": 1
+                                              }
+                                            },
+                                            "__collapse": false
+                                          },
+                                          "id": "9a7435ca-e3a6-4d61-a2b7-6e79f873e820"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "35",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 0
+                                            },
+                                            "__collapse": false
+                                          },
+                                          "id": "86f1420a-465b-4281-8b3c-0128cd8e6cd3"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "35",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 8
+                                            },
+                                            "__collapse": false
+                                          },
+                                          "id": "2b0f83ca-eb59-4737-969c-1f71c6f7c796"
+                                        }
+                                      ]
+                                    },
+                                    "id": "6f68793c-03fb-4664-9c6a-07b1087b4ec0"
+                                  }
+                                ]
+                              },
+                              "id": "659594c6-938a-4c59-a6e5-b9fb190dea06"
+                            }
+                          ]
+                        },
+                        "id": "f1f6383c-9142-4e9b-9af8-3ae8804b8271"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "35",
+                          "value": {
+                            "type": "mul",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "35"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": -1
+                            }
+                          },
+                          "__collapse": false
+                        },
+                        "id": "3450ec2e-aeb9-4753-b2da-aa9b919a4a7b"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "35",
+                          "value": {
+                            "type": "add",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "35"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 8
+                            }
+                          },
+                          "__collapse": false
+                        },
+                        "id": "9ed3be4d-f2c3-48ad-b349-cdf577f0051f"
+                      }
+                    ]
+                  },
+                  "id": "6e72e380-9a67-480c-815b-565b5ac8aac6"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "variable",
+                      "value": "34"
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "V4"
+                    },
+                    "tilesetId": "0785b5a2-1c33-43cc-9993-6d2c72b9e511",
+                    "tileIndex": {
+                      "type": "variable",
+                      "value": "35"
+                    }
+                  },
+                  "id": "2e01b3f3-9ad8-40b8-a871-e9675cbedc93"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.004
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "5b76932e-3373-4d0d-9244-9e5e728b2fad"
+                }
+              ]
+            },
+            "id": "fc5863b4-3b5d-49b0-b6a0-22a3cd482885"
+          }
+        ]
+      },
+      "id": "b6eda496-9cd1-4dce-b8b8-322a7a47b7e5"
+    }
+  ]
+}

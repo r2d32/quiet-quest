@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "a674169f-1214-4f47-b364-3436ce86028f",
+  "name": "download-recolored",
+  "symbol": "sprite_download_recolored",
+  "states": [
+    {
+      "id": "c0066c77-cfe2-4bb2-b72d-1ec7f5a729be",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "a97dd5e6-2f3a-4da3-b227-0e21042e1686",
+          "frames": [
+            {
+              "id": "b7df5d5d-1c64-4107-9a90-25f7ec81f32a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8f84906c-49ea-438d-a658-e04d646d143d",
+          "frames": [
+            {
+              "id": "cccdf95e-8837-4c62-b528-bb0b39279c0a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e9db3914-b69e-4ccb-a8d8-26ce0e6fe3d8",
+          "frames": [
+            {
+              "id": "f9fffa25-07ab-4db3-a623-ef16b11a6ee0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "58688ade-dbf7-4c93-b0db-0b3fee1a42b1",
+          "frames": [
+            {
+              "id": "b184d657-2053-4f72-9f15-13f76bb7934e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0c3aabca-d121-490d-b100-81d448d6e5ce",
+          "frames": [
+            {
+              "id": "a1676e36-4ead-4de5-9089-e6fa4503fb08",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cc074c73-f16e-455e-b578-5fbaf7038e5d",
+          "frames": [
+            {
+              "id": "7a54520b-8f9b-41ee-a549-40bddde3babd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a79fd4e5-5bbc-4d61-ba0f-61cb0ff918a4",
+          "frames": [
+            {
+              "id": "81e7596a-95a8-45c6-90b2-6b647173ac65",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7efdd656-2bdf-43b0-abdd-c2d6368987ab",
+          "frames": [
+            {
+              "id": "de87eb28-d2bb-4701-8804-5c9ef9f57b3b",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 48,
+  "canvasHeight": 48,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "download-recolored.png",
+  "width": 48,
+  "height": 48,
+  "checksum": "b10f33be7348b008f99871c6ff7388e4374782d2"
+}

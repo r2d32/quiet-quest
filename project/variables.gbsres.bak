@@ -1,0 +1,261 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "Selected_Character",
+      "symbol": "var_selected_character"
+    },
+    {
+      "id": "1",
+      "name": "HeroMaxHP",
+      "symbol": "var_heromaxhp"
+    },
+    {
+      "id": "2",
+      "name": "HeroCurrentHP",
+      "symbol": "var_herocurrenthp"
+    },
+    {
+      "id": "3",
+      "name": "HeroATK",
+      "symbol": "var_heroatk"
+    },
+    {
+      "id": "4",
+      "name": "HeroDEF",
+      "symbol": "var_herodef"
+    },
+    {
+      "id": "5",
+      "name": "HeroSpeed",
+      "symbol": "var_herospeed"
+    },
+    {
+      "id": "6",
+      "name": "HeroStatus",
+      "symbol": "var_herostatus"
+    },
+    {
+      "id": "7",
+      "name": "MonsterMaxHP",
+      "symbol": "var_monstermaxhp_0"
+    },
+    {
+      "id": "8",
+      "name": "MonsterCurrentHP",
+      "symbol": "var_monstercurrenthp"
+    },
+    {
+      "id": "9",
+      "name": "MonsterATK",
+      "symbol": "var_monsteratk"
+    },
+    {
+      "id": "10",
+      "name": "MonsterDEF",
+      "symbol": "var_monsterdef_0"
+    },
+    {
+      "id": "11",
+      "name": "MonsterSpeed",
+      "symbol": "var_monsterspeed_0"
+    },
+    {
+      "id": "12",
+      "name": "MonsterStatus",
+      "symbol": "var_monsterstatus"
+    },
+    {
+      "id": "13",
+      "name": "HeroStatusCheck",
+      "symbol": "var_herostatuscheck"
+    },
+    {
+      "id": "14",
+      "name": "RNG_Counter",
+      "symbol": "var_rng_counter"
+    },
+    {
+      "id": "15",
+      "name": "RollTotal",
+      "symbol": "var_rolltotal"
+    },
+    {
+      "id": "16",
+      "name": "EncounterID",
+      "symbol": "var_encounterid"
+    },
+    {
+      "id": "17",
+      "name": "Monster_Move_1",
+      "symbol": "var_monster_move_1"
+    },
+    {
+      "id": "18",
+      "name": "Monster_Move_2",
+      "symbol": "var_monster_move_2"
+    },
+    {
+      "id": "19",
+      "name": "Monster_Move_3",
+      "symbol": "var_monster_move_3"
+    },
+    {
+      "id": "20",
+      "name": "Monster_Move_4",
+      "symbol": "var_monster_move_4"
+    },
+    {
+      "id": "21",
+      "name": "Monster_Move_5",
+      "symbol": "var_monster_move_5"
+    },
+    {
+      "id": "22",
+      "name": "Monster_Move_6",
+      "symbol": "var_monster_move_6"
+    },
+    {
+      "id": "23",
+      "name": "Global_PlayerLastX",
+      "symbol": "var_global_playerlastx"
+    },
+    {
+      "id": "24",
+      "name": "Global_PlayerLastY",
+      "symbol": "var_global_playerlasty"
+    },
+    {
+      "id": "25",
+      "name": "Global_PoisonSteps",
+      "symbol": "var_global_poisonsteps"
+    },
+    {
+      "id": "8ac89964-779b-44ed-827f-ebc979d7e465__L0",
+      "name": "Menu Choice (Local 0)",
+      "symbol": "var_menu_choice_local_0"
+    },
+    {
+      "id": "87ebcd12-579b-4237-9562-292e5b98404a__L0",
+      "name": "Attack Roll (Local 0)",
+      "symbol": "var_attack_roll_local_0"
+    },
+    {
+      "id": "3ab707fb-d211-4aeb-84e3-715c6c9fcff8__L0",
+      "name": "Row",
+      "symbol": "var_row"
+    },
+    {
+      "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L0",
+      "name": "Battle_EnemySlotChoice",
+      "symbol": "var_battle_enemyslotchoice_"
+    },
+    {
+      "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L1",
+      "name": "BattleAttackRollSum",
+      "symbol": "var_battleattackrollsum"
+    },
+    {
+      "id": "3ab707fb-d211-4aeb-84e3-715c6c9fcff8__16",
+      "name": "EncounterEvent",
+      "symbol": "var_encounterevent"
+    },
+    {
+      "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L2",
+      "name": "Battle_SelectedMoveID",
+      "symbol": "var_battle_selectedmoveid"
+    },
+    {
+      "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L3",
+      "name": "Battle_TargetAC",
+      "symbol": "var_battle_targetac"
+    },
+    {
+      "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L4",
+      "name": "DamageCaused",
+      "symbol": "var_damagecaused"
+    },
+    {
+      "id": "87ebcd12-579b-4237-9562-292e5b98404a__L1",
+      "name": "HeroDamageToMonster",
+      "symbol": "var_herodamagetomonster"
+    },
+    {
+      "id": "d6e90fea-e672-41c7-b65f-b9a488f2c577__L0",
+      "name": "PlayerCurrentX",
+      "symbol": "var_playercurrentx"
+    },
+    {
+      "id": "d6e90fea-e672-41c7-b65f-b9a488f2c577__L1",
+      "name": "PlayerCurrentY",
+      "symbol": "var_playercurrenty"
+    },
+    {
+      "id": "d6e90fea-e672-41c7-b65f-b9a488f2c577__L2",
+      "name": "PoisonDamage",
+      "symbol": "var_poisondamage"
+    },
+    {
+      "id": "8ac89964-779b-44ed-827f-ebc979d7e465__L1",
+      "name": "d6",
+      "symbol": "var_d6"
+    },
+    {
+      "id": "3ab707fb-d211-4aeb-84e3-715c6c9fcff8__L1",
+      "name": "Local 1",
+      "symbol": "var_local_1"
+    },
+    {
+      "id": "26",
+      "name": "Row",
+      "symbol": "var_row_0"
+    },
+    {
+      "id": "27",
+      "name": "Tile_Idx",
+      "symbol": "var_tile_idx"
+    },
+    {
+      "id": "28",
+      "name": "Col",
+      "symbol": "var_col"
+    },
+    {
+      "id": "29",
+      "name": "TargetX",
+      "symbol": "var_targetx"
+    },
+    {
+      "id": "30",
+      "name": "TargetY",
+      "symbol": "var_targety"
+    },
+    {
+      "id": "31",
+      "name": "Enemy_Displayed_Pixels",
+      "symbol": "var_enemy_displayed_pixels"
+    },
+    {
+      "id": "32",
+      "name": "Hero_Displayed_Pixels",
+      "symbol": "var_hero_displayed_pixels"
+    },
+    {
+      "id": "33",
+      "name": "Bar_Target_Pixels",
+      "symbol": "var_bar_target_pixels"
+    },
+    {
+      "id": "34",
+      "name": "Bar_Tile_X",
+      "symbol": "var_bar_tile_x"
+    },
+    {
+      "id": "35",
+      "name": "Bar_Tile_Frame",
+      "symbol": "var_bar_tile_frame"
+    }
+  ],
+  "constants": []
+}

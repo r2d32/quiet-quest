@@ -1,0 +1,56 @@
+{
+  "_resourceType": "trigger",
+  "id": "cf8a9a5d-d92f-4409-9999-456af3edc131",
+  "name": "Cast a Spell",
+  "prefabId": "",
+  "x": 1,
+  "y": 8,
+  "symbol": "trigger_5",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "You casted a spell"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "b1c4db7b-3fa7-4c6d-bc51-3aae80aa2059"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 1
+        },
+        "y": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "3bc488ac-4bde-4621-9245-4cbb24cd0ea2"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 2
+}

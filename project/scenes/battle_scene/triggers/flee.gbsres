@@ -1,0 +1,161 @@
+{
+  "_resourceType": "trigger",
+  "id": "453bfe17-b103-4f4b-ae25-436e883c8e23",
+  "name": "Flee",
+  "prefabId": "",
+  "x": 4,
+  "y": 8,
+  "symbol": "trigger_6",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "L0",
+        "operation": "set",
+        "other": "rnd",
+        "vectorY": "L0",
+        "value": "0",
+        "minValue": 1,
+        "maxValue": 20,
+        "clamp": false
+      },
+      "id": "a7f9cae6-4757-4e71-8ef1-306b169a72cb"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "expression",
+            "value": "$05$+$L0$"
+          },
+          "valueB": {
+            "type": "expression",
+            "value": "$11$+15"
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "You escaped!",
+              "__collapse": true
+            },
+            "id": "49307e70-c432-45b4-a8d3-1754aa746d2f"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You ran away\nfrom the enemy!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30,
+              "__collapse": false
+            },
+            "id": "da07808e-25ce-46a0-a37d-39119a8ea46c"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "9be29b87-ecaf-4247-b076-ac77fc14a5fa",
+              "x": {
+                "type": "number",
+                "value": 34
+              },
+              "y": {
+                "type": "number",
+                "value": 19
+              },
+              "direction": "",
+              "fadeSpeed": "2",
+              "__collapse": false
+            },
+            "id": "474149a1-1c53-4201-8faf-2974aa3543b0"
+          }
+        ],
+        "false": []
+      },
+      "id": "6895fa1a-203e-4b95-af6a-ec29910bc5a0"
+    },
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "You could not escape",
+        "__collapse": true
+      },
+      "id": "5a55729e-8c93-4d46-a8b6-0cb4e8db74ea"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "You couldn't get\naway"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "a316905d-5b93-446e-b9dd-2d069a2f5dc6"
+    },
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "Now its the monster's turn"
+      },
+      "id": "d3ea5add-88e7-43e1-a84a-34252ce0bd98"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 9
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        }
+      },
+      "id": "ede7e399-8a60-4e1a-9cf8-d71194a885b5"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 4
+}

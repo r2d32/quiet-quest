@@ -1,0 +1,181 @@
+{
+  "_resourceType": "sprite",
+  "id": "b0515028-5b74-4377-b80e-447bfbb8da97",
+  "name": "HealthBar",
+  "symbol": "sprite_healthbar",
+  "states": [
+    {
+      "id": "313b2035-5780-4a2d-b90e-c039f9052b4b",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "46c70734-9645-40b3-8a42-aeca746804d7",
+          "frames": [
+            {
+              "id": "9a1f0ea8-2af0-4ce4-a996-9d79c54c2cc5",
+              "tiles": [
+                {
+                  "id": "8e10effc-d44b-445d-8dd6-272de835008f",
+                  "x": -16,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": -8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "03f4068e-c958-469f-bf2e-bd72f40f8316",
+                  "x": -8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": -8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "32c51790-4135-4c80-aa85-afc9185f21b6",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": -8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "3c7b60da-8fcf-43f9-be0b-0f147fd7a477",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": -8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "8a17aea7-f455-4c8e-ace8-ce31c84f56de",
+                  "x": 16,
+                  "y": 0,
+                  "sliceX": 32,
+                  "sliceY": -8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "808e5093-261a-4767-bc7f-566ddf5b6ef7",
+                  "x": 24,
+                  "y": 0,
+                  "sliceX": 40,
+                  "sliceY": -8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c2a6a4d6-37d6-4941-acfb-79c9bad0fe08",
+          "frames": [
+            {
+              "id": "b12eb662-690f-4863-8cfb-2ffd4b355225",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7d8642ec-49cc-4c0d-894f-ffa746768391",
+          "frames": [
+            {
+              "id": "9b6ebc7e-c7a2-4248-95ce-f0b9f4782fd7",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "62cae012-a0c6-4c3e-9b67-af341939bc86",
+          "frames": [
+            {
+              "id": "fc222cdb-695a-401e-adb5-076e5b428d3b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "97273d7f-6d3d-406c-835e-8b7098b40799",
+          "frames": [
+            {
+              "id": "54457f97-64c0-461d-aa74-cc36b9c6830a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5ab73ec2-6f8b-43e7-b11d-321926985b8f",
+          "frames": [
+            {
+              "id": "b8825bc8-d481-4d28-b47d-052da0e8f0fc",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "47f84dc4-e309-4c83-9821-dd22ee4ecc86",
+          "frames": [
+            {
+              "id": "4eebcd7f-790a-4c9a-81e9-dc5d05ebf077",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "427fc3a8-5d4e-4550-a01f-2a550cbe1c0d",
+          "frames": [
+            {
+              "id": "aac755a0-7ff6-4a4e-a501-d58bfba202ba",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": -16,
+  "canvasOriginY": -8,
+  "canvasWidth": 48,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "HealthBar.png",
+  "width": 48,
+  "height": 8,
+  "checksum": "36a574dbff55206f8e3f29b30e065636ef14171a"
+}

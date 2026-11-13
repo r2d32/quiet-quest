@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "52f767fb-4b25-4e40-bf3a-947d33ac594d",
+  "name": "HeroPush",
+  "symbol": "tileset_heropush",
+  "width": 7,
+  "height": 6,
+  "imageWidth": 56,
+  "imageHeight": 48,
+  "filename": "HeroPush.png"
+}

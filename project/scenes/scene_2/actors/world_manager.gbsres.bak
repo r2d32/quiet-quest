@@ -1,0 +1,226 @@
+{
+  "_resourceType": "actor",
+  "id": "d6e90fea-e672-41c7-b65f-b9a488f2c577",
+  "name": "World_Manager",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "8fbfe8a4-9c86-407a-8f7c-4944de07bcdb",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": true,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_6",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "1ce43743-cf86-4903-b31c-81f0636e2a8a"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "property",
+          "target": "player",
+          "property": "xpos"
+        }
+      },
+      "id": "de019a3c-6a71-4769-bade-ac0070d825b6"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "24",
+        "value": {
+          "type": "property",
+          "target": "player",
+          "property": "ypos"
+        }
+      },
+      "id": "5c6730fd-341b-4e7d-94c8-424a6119ee8e"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Step & Poison Loop"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L0",
+              "value": {
+                "type": "property",
+                "target": "player",
+                "property": "xpos"
+              }
+            },
+            "id": "38660a7a-91fb-4fe1-b18e-7e39219ada83"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L1",
+              "value": {
+                "type": "property",
+                "target": "player",
+                "property": "ypos"
+              }
+            },
+            "id": "27956ac5-0265-4bca-bd8b-7234ed36bc75"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "expression",
+                "value": "$L0$ != $23$ || $L1$ != $24$"
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "23",
+                    "value": {
+                      "type": "variable",
+                      "value": "L0"
+                    }
+                  },
+                  "id": "419d16be-c186-4906-b6f8-ea33f9d8d0b7"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "24",
+                    "value": {
+                      "type": "variable",
+                      "value": "L1"
+                    }
+                  },
+                  "id": "55e058ff-6c05-47be-9b11-78d1ab06be7e"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "25",
+                    "value": {
+                      "type": "add",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "25"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    },
+                    "__collapse": false
+                  },
+                  "id": "ca998ba6-ffec-434f-999e-718d618ae739"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "25"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 16
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_CAMERA_SHAKE",
+                        "args": {
+                          "time": 0.1,
+                          "frames": 30,
+                          "shakeDirection": "horizontal",
+                          "magnitude": {
+                            "type": "number",
+                            "value": 2
+                          }
+                        },
+                        "id": "9f6c19b1-3107-48a3-82c5-7995e8883a42"
+                      },
+                      {
+                        "command": "EVENT_FADE_OUT",
+                        "args": {
+                          "speed": 1
+                        },
+                        "id": "c1b6d35f-fcb8-4844-8c07-bef51a8118a0"
+                      },
+                      {
+                        "command": "EVENT_FADE_IN",
+                        "args": {
+                          "speed": 1
+                        },
+                        "id": "da5d6b01-7d46-4113-8d98-075781fd00fe"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "25",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "f4a09dc0-4c03-42f8-9e3b-ca2b8deb470b"
+                      },
+                      {
+                        "command": "EVENT_GROUP",
+                        "args": {
+                          "__collapse": false,
+                          "__label": "Reduce health"
+                        },
+                        "children": {
+                          "true": []
+                        },
+                        "id": "7704d148-68cc-4896-ae29-737cc4e4ecb2"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "109cb2c4-7405-46f0-a287-246d862498c0"
+                }
+              ],
+              "false": []
+            },
+            "id": "dcd042f9-d244-4aed-a83e-7a91d9eb2de7"
+          }
+        ]
+      },
+      "id": "6f20846f-f474-4a59-8c64-c9e4412c091d"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 0,
+  "y": 0,
+  "_index": 0
+}

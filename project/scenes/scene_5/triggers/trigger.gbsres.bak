@@ -1,0 +1,525 @@
+{
+  "_resourceType": "trigger",
+  "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95",
+  "name": "",
+  "prefabId": "",
+  "x": 9,
+  "y": 7,
+  "symbol": "trigger_7",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "On the monster's turn it will randomly pick an action"
+      },
+      "id": "95aacb5a-00c0-4688-8001-92bda4b8b4b0"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "L0",
+        "operation": "set",
+        "other": "rnd",
+        "vectorY": "L0",
+        "value": "0",
+        "minValue": 1,
+        "maxValue": 8,
+        "clamp": false,
+        "__collapse": false
+      },
+      "id": "886cda8d-ec5b-4495-8541-61a5e920847d"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "L0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "The monster will do a normal attack",
+              "__collapse": true
+            },
+            "id": "ed6cb1cd-60ef-4860-95b8-fb9976dd6342"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "L1",
+              "operation": "set",
+              "other": "rnd",
+              "vectorY": "L0",
+              "value": "0",
+              "minValue": 1,
+              "maxValue": 20,
+              "clamp": false,
+              "__collapse": true,
+              "__label": "Monster Attack Roll = Random (1,20)"
+            },
+            "id": "1aef14d1-5ef6-422c-886c-5abca0bbb7bc"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "The monster \nlaunched an attack"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30,
+              "__collapse": true
+            },
+            "id": "9a941994-cb39-4a81-8938-90abc4242f1b"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gte",
+                "valueA": {
+                  "type": "expression",
+                  "value": "$09$+$11$+$L1$"
+                },
+                "valueB": {
+                  "type": "expression",
+                  "value": "$04$+$05$+10"
+                }
+              },
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Hit"
+                  },
+                  "id": "5e6d3e89-dc9b-4fa6-aafa-d9db13b14c9f"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "2",
+                    "value": {
+                      "type": "expression",
+                      "value": "$02$-$09$"
+                    }
+                  },
+                  "id": "95221484-025b-4ba1-bcb1-38f4f4c36c59"
+                },
+                {
+                  "command": "EVENT_CAMERA_SHAKE",
+                  "args": {
+                    "time": 0.5,
+                    "frames": 30,
+                    "shakeDirection": "horizontal",
+                    "magnitude": {
+                      "type": "number",
+                      "value": 5
+                    }
+                  },
+                  "id": "007c4476-8099-4ba5-9c7c-dda305164c2b"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "The hero took $09$\ndamage!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "53a23c8a-d7ca-4451-a162-0626611afb8a"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Miss"
+                  },
+                  "id": "c412db41-5ef1-425c-9304-c0dd80834bba"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "The Monster \nmissed!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "f087fdba-8da7-49d8-8286-5e3d63b15a03"
+                }
+              ]
+            },
+            "id": "055a17c6-ad74-41c0-89c5-8fc15c31e99f"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "The Monster will do a Special Attack!",
+              "__collapse": true
+            },
+            "id": "b283f7f7-5234-43a8-bd3d-cdcdfc2e1a1b"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "L1",
+              "operation": "set",
+              "other": "rnd",
+              "vectorY": "L0",
+              "value": "0",
+              "minValue": 1,
+              "maxValue": 20,
+              "clamp": false,
+              "__collapse": false,
+              "__label": "Monster Attack Roll = Random (1,20)"
+            },
+            "id": "85dae75e-18dc-452d-9060-7afd0eae7b02"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "The Monster \nstarts to perform \na weird dance ..."
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "a35915ac-25a5-4cd8-887c-11257c48b52a"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gte",
+                "valueA": {
+                  "type": "expression",
+                  "value": "$09$+$11$+$L1$"
+                },
+                "valueB": {
+                  "type": "expression",
+                  "value": "$04$+$05$+10"
+                }
+              },
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Special Attack Hit",
+                    "__collapse": true
+                  },
+                  "id": "4e067e67-eca1-49a5-b0c0-4e86cb91454b"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "not",
+                      "value": {
+                        "type": "variable",
+                        "value": "6"
+                      }
+                    },
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "It released \nPoison Spores!"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30,
+                          "__collapse": true
+                        },
+                        "id": "b9dc4942-e0f6-4a08-8141-e37491b8428b"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "6",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "__collapse": true
+                        },
+                        "id": "9a392b5b-788a-4b15-8934-3898c6234344"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "...but nothing \nhappened!"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "ea36af82-41bf-4d74-a902-2de955250110"
+                      }
+                    ]
+                  },
+                  "id": "cc3716ef-d708-4d17-bfaf-3b4018215552"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Miss"
+                  },
+                  "id": "73eb4b81-1c66-41ef-a039-e0c363e6deb0"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "The Monster \nmissed!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "363402aa-2053-4fb6-8ded-2a76e2249da8"
+                }
+              ]
+            },
+            "id": "9f76999e-fe6d-4867-b14a-0bd8a80d8c37"
+          }
+        ]
+      },
+      "id": "b28b60c7-8e64-49d5-9175-e9dcd4aa37a0"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "2"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You Died"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30,
+              "__collapse": true
+            },
+            "id": "a1f92d9d-03a2-4ed0-94d0-0e39f3b777ee"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "9be29b87-ecaf-4247-b076-ac77fc14a5fa",
+              "x": {
+                "type": "number",
+                "value": 19
+              },
+              "y": {
+                "type": "number",
+                "value": 17
+              },
+              "direction": "",
+              "fadeSpeed": "2",
+              "__collapse": false
+            },
+            "id": "366fc2c7-ffb0-422b-aa07-3645188bb60f"
+          }
+        ],
+        "false": []
+      },
+      "id": "7e0a3340-4106-4016-beed-dcd06bbc2d1e"
+    },
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "We set the status check to false in case a status was set to the player",
+        "__collapse": true
+      },
+      "id": "98dc4699-f957-4a12-ba50-ebb99cd657d9"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "13",
+        "value": {
+          "type": "false"
+        },
+        "__collapse": true
+      },
+      "id": "089632a4-8a39-4bd3-af61-de1d2808caac"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 1
+        },
+        "y": {
+          "type": "number",
+          "value": 2
+        },
+        "__collapse": false
+      },
+      "id": "44d1cddb-7fa3-47df-9819-90a3c2156b11"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 5
+}

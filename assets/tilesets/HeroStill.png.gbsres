@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "91dbf200-f1b5-4e1d-baae-a6b0dff90a78",
+  "name": "HeroStill",
+  "symbol": "tileset_herostill",
+  "width": 7,
+  "height": 6,
+  "imageWidth": 56,
+  "imageHeight": 48,
+  "filename": "HeroStill.png"
+}

@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "db5ce351-f17d-4ece-8448-381a11782d0d",
+  "name": "Battle1",
+  "symbol": "bg_battle1",
+  "tileColors": "",
+  "filename": "Battle1.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

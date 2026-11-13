@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "aaae875b-403d-4063-993a-5c0571de3ed1",
+  "name": "viperStill",
+  "symbol": "tileset_viperstill",
+  "width": 6,
+  "height": 6,
+  "imageWidth": 48,
+  "imageHeight": 48,
+  "filename": "viperStill.png"
+}
