@@ -255,6 +255,11 @@
       "id": "35",
       "name": "Bar_Tile_Frame",
       "symbol": "var_bar_tile_frame"
+    },
+    {
+      "id": "36",
+      "name": "Bar_Is_Healing",
+      "symbol": "var_bar_is_healing"
     }
   ],
   "constants": []
