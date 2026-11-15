@@ -3,133 +3,178 @@
   "variables": [
     {
       "id": "0",
-      "name": "Selected_Character",
-      "symbol": "var_selected_character"
+      "name": "Global_SelectedCharacter",
+      "symbol": "var_global_selectedcharacte"
     },
     {
       "id": "1",
-      "name": "HeroMaxHP",
-      "symbol": "var_heromaxhp"
+      "name": "Global_HeroMaxHP",
+      "symbol": "var_global_heromaxhp"
     },
     {
       "id": "2",
-      "name": "HeroCurrentHP",
-      "symbol": "var_herocurrenthp"
+      "name": "Global_HeroCurrentHP",
+      "symbol": "var_global_herocurrenthp"
     },
     {
       "id": "3",
-      "name": "HeroATK",
-      "symbol": "var_heroatk"
+      "name": "Global_HeroATK",
+      "symbol": "var_global_heroatk"
     },
     {
       "id": "4",
-      "name": "HeroDEF",
-      "symbol": "var_herodef"
+      "name": "Global_HeroDEF",
+      "symbol": "var_global_herodef"
     },
     {
       "id": "5",
-      "name": "HeroSpeed",
-      "symbol": "var_herospeed"
+      "name": "Global_HeroSpeed",
+      "symbol": "var_global_herospeed"
     },
     {
       "id": "6",
-      "name": "HeroStatus",
-      "symbol": "var_herostatus"
+      "name": "Global_HeroStatus",
+      "symbol": "var_global_herostatus"
     },
     {
       "id": "7",
-      "name": "MonsterMaxHP",
-      "symbol": "var_monstermaxhp_0"
+      "name": "Battle_MonsterMaxHP",
+      "symbol": "var_battle_monstermaxhp"
     },
     {
       "id": "8",
-      "name": "MonsterCurrentHP",
-      "symbol": "var_monstercurrenthp"
+      "name": "Battle_MonsterCurrentHP",
+      "symbol": "var_battle_monstercurrenthp"
     },
     {
       "id": "9",
-      "name": "MonsterATK",
-      "symbol": "var_monsteratk"
+      "name": "Battle_MonsterATK",
+      "symbol": "var_battle_monsteratk"
     },
     {
       "id": "10",
-      "name": "MonsterDEF",
-      "symbol": "var_monsterdef_0"
+      "name": "Battle_MonsterDEF",
+      "symbol": "var_battle_monsterdef"
     },
     {
       "id": "11",
-      "name": "MonsterSpeed",
-      "symbol": "var_monsterspeed_0"
+      "name": "Battle_MonsterSpeed",
+      "symbol": "var_battle_monsterspeed"
     },
     {
       "id": "12",
-      "name": "MonsterStatus",
-      "symbol": "var_monsterstatus"
+      "name": "Battle_MonsterStatus",
+      "symbol": "var_battle_monsterstatus"
     },
     {
       "id": "13",
-      "name": "HeroStatusCheck",
-      "symbol": "var_herostatuscheck"
+      "name": "Battle_HeroStatusCheck",
+      "symbol": "var_battle_herostatuscheck"
     },
     {
       "id": "14",
-      "name": "RNG_Counter",
-      "symbol": "var_rng_counter"
+      "name": "Global_RNGCounter",
+      "symbol": "var_global_rngcounter"
     },
     {
       "id": "15",
-      "name": "RollTotal",
-      "symbol": "var_rolltotal"
+      "name": "Temp_RollTotal",
+      "symbol": "var_temp_rolltotal"
     },
     {
       "id": "16",
-      "name": "EncounterID",
-      "symbol": "var_encounterid"
+      "name": "Global_EncounterID",
+      "symbol": "var_global_encounterid"
     },
     {
       "id": "17",
-      "name": "Monster_Move_1",
-      "symbol": "var_monster_move_1"
+      "name": "Battle_Monster_Move_1",
+      "symbol": "var_battle_monster_move_1"
     },
     {
       "id": "18",
-      "name": "Monster_Move_2",
-      "symbol": "var_monster_move_2"
+      "name": "Battle_Monster_Move_2",
+      "symbol": "var_battle_monster_move_2"
     },
     {
       "id": "19",
-      "name": "Monster_Move_3",
-      "symbol": "var_monster_move_3"
+      "name": "Battle_Monster_Move_3",
+      "symbol": "var_battle_monster_move_3"
     },
     {
       "id": "20",
-      "name": "Monster_Move_4",
-      "symbol": "var_monster_move_4"
+      "name": "Battle_Monster_Move_4",
+      "symbol": "var_battle_monster_move_4"
     },
     {
       "id": "21",
-      "name": "Monster_Move_5",
-      "symbol": "var_monster_move_5"
+      "name": "Battle_Monster_Move_5",
+      "symbol": "var_battle_monster_move_5"
     },
     {
       "id": "22",
-      "name": "Monster_Move_6",
-      "symbol": "var_monster_move_6"
-    },
-    {
-      "id": "23",
-      "name": "Global_PlayerLastX",
-      "symbol": "var_global_playerlastx"
-    },
-    {
-      "id": "24",
-      "name": "Global_PlayerLastY",
-      "symbol": "var_global_playerlasty"
+      "name": "Battle_Monster_Move_6",
+      "symbol": "var_battle_monster_move_6"
     },
     {
       "id": "25",
       "name": "Global_PoisonSteps",
       "symbol": "var_global_poisonsteps"
+    },
+    {
+      "id": "26",
+      "name": "Temp_Row",
+      "symbol": "var_temp_row"
+    },
+    {
+      "id": "27",
+      "name": "Temp_TileIdx",
+      "symbol": "var_temp_tileidx"
+    },
+    {
+      "id": "28",
+      "name": "Temp_Col",
+      "symbol": "var_temp_col"
+    },
+    {
+      "id": "29",
+      "name": "Temp_TargetX",
+      "symbol": "var_temp_targetx"
+    },
+    {
+      "id": "30",
+      "name": "Temp_TargetY",
+      "symbol": "var_temp_targety"
+    },
+    {
+      "id": "31",
+      "name": "HUD_EnemyDisplayedPixels",
+      "symbol": "var_hud_enemydisplayedpixel"
+    },
+    {
+      "id": "32",
+      "name": "HUD_HeroDisplayedPixels",
+      "symbol": "var_hud_herodisplayedpixels"
+    },
+    {
+      "id": "33",
+      "name": "HUD_BarTargetPixels",
+      "symbol": "var_hud_bartargetpixels"
+    },
+    {
+      "id": "34",
+      "name": "HUD_BarTileX",
+      "symbol": "var_hud_bartilex"
+    },
+    {
+      "id": "35",
+      "name": "HUD_BarTileFrame",
+      "symbol": "var_hud_bartileframe"
+    },
+    {
+      "id": "36",
+      "name": "HUD_BarIsHealing",
+      "symbol": "var_hud_barishealing"
     },
     {
       "id": "8ac89964-779b-44ed-827f-ebc979d7e465__L0",
@@ -207,59 +252,19 @@
       "symbol": "var_local_1"
     },
     {
-      "id": "26",
-      "name": "Row",
-      "symbol": "var_row_0"
+      "id": "37",
+      "name": "Global_Player_Level",
+      "symbol": "var_global_player_level"
     },
     {
-      "id": "27",
-      "name": "Tile_Idx",
-      "symbol": "var_tile_idx"
+      "id": "40",
+      "name": "Battle_TurnState",
+      "symbol": "var_battle_turnstate"
     },
     {
-      "id": "28",
-      "name": "Col",
-      "symbol": "var_col"
-    },
-    {
-      "id": "29",
-      "name": "TargetX",
-      "symbol": "var_targetx"
-    },
-    {
-      "id": "30",
-      "name": "TargetY",
-      "symbol": "var_targety"
-    },
-    {
-      "id": "31",
-      "name": "Enemy_Displayed_Pixels",
-      "symbol": "var_enemy_displayed_pixels"
-    },
-    {
-      "id": "32",
-      "name": "Hero_Displayed_Pixels",
-      "symbol": "var_hero_displayed_pixels"
-    },
-    {
-      "id": "33",
-      "name": "Bar_Target_Pixels",
-      "symbol": "var_bar_target_pixels"
-    },
-    {
-      "id": "34",
-      "name": "Bar_Tile_X",
-      "symbol": "var_bar_tile_x"
-    },
-    {
-      "id": "35",
-      "name": "Bar_Tile_Frame",
-      "symbol": "var_bar_tile_frame"
-    },
-    {
-      "id": "36",
-      "name": "Bar_Is_Healing",
-      "symbol": "var_bar_is_healing"
+      "id": "9be29b87-ecaf-4247-b076-ac77fc14a5fa__L0",
+      "name": "pla",
+      "symbol": "var_pla"
     }
   ],
   "constants": []

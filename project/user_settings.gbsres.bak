@@ -1,14 +1,14 @@
 {
   "_resourceType": "settings",
-  "worldScrollX": 1311.199951171875,
-  "worldScrollY": 0,
-  "zoom": 240.55864068888422,
+  "worldScrollX": 872.4446411132812,
+  "worldScrollY": 175.5555877685547,
+  "zoom": 210.07328155286905,
   "navigatorSplitSizes": [
-    30,
+    68,
     30,
     205,
     30,
-    707
+    205
   ],
   "showNavigator": true,
   "showCollisions": true,
@@ -20,13 +20,24 @@
     "EVENT_TEXT",
     "EVENT_SWITCH_SCENE"
   ],
-  "debuggerEnabled": false,
+  "debuggerEnabled": true,
   "debuggerScriptType": "editor",
   "debuggerVariablesFilter": "all",
   "debuggerCollapsedPanes": [],
   "debuggerPauseOnScriptChanged": false,
   "debuggerPauseOnWatchedVariableChanged": false,
-  "debuggerBreakpoints": [],
+  "debuggerBreakpoints": [
+    {
+      "scriptEventId": "f464c3c7-64a7-4b5a-9b1f-efa9754c14c6",
+      "context": {
+        "type": "script",
+        "entityType": "customEvent",
+        "entityId": "3987e247-fbaa-4a0d-8d4d-03c491564fea",
+        "sceneId": "",
+        "scriptKey": "script"
+      }
+    }
+  ],
   "debuggerWatchedVariables": [],
   "openBuildLogOnWarnings": true
 }

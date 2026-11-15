@@ -94,7 +94,7 @@
                 }
               },
               "__collapseElse": true,
-              "__collapse": true
+              "__collapse": false
             },
             "children": {
               "true": [
@@ -339,29 +339,9 @@
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "customEventId": "b5891c97-be7c-4d3d-8a0a-c08bffdf8295",
-              "$variable[V0]$": {
-                "type": "variable",
-                "value": "8"
-              },
-              "$variable[V1]$": {
-                "type": "variable",
-                "value": "7"
-              },
-              "$variable[V2]$": {
-                "type": "variable",
-                "value": "31"
-              },
-              "$variable[V3]$": {
-                "type": "number",
-                "value": 3
-              },
-              "$variable[V4]$": {
-                "type": "number",
-                "value": 2
-              }
+              "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05"
             },
-            "id": "2a31ebf7-d2b8-42a6-a350-a517fe29bada"
+            "id": "dc53b01e-566c-45d9-a03b-9aba843f5919"
           }
         ],
         "false": [
@@ -500,22 +480,11 @@
             "id": "3695c66c-bf65-459f-aae3-b9f9035bf73f"
           },
           {
-            "command": "EVENT_SWITCH_SCENE",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "sceneId": "9be29b87-ecaf-4247-b076-ac77fc14a5fa",
-              "x": {
-                "type": "number",
-                "value": 19
-              },
-              "y": {
-                "type": "number",
-                "value": 17
-              },
-              "direction": "",
-              "fadeSpeed": "2",
-              "__collapse": false
+              "customEventId": "0cc71756-3ac1-446c-a2fb-7f4afe218a3b"
             },
-            "id": "0e2d401c-8f86-41a2-b0aa-1fa1db267a4f"
+            "id": "1f68ebd5-dd89-4a06-b535-ade6372725d8"
           }
         ],
         "false": []

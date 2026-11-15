@@ -1,0 +1,97 @@
+# Combat Mechanics & Ruleset (Game Design Document)
+
+
+
+## 1. Core Stats
+
+
+
+Every combatant (Hero and Monsters) relies on four primary stats:
+
+* HP (Health Points): Determines life. If HP reaches 0, the combatant is defeated.
+
+* ATK (Attack): The offensive power used to calculate physical damage.
+
+* DEF (Defense): Armor and mitigation used to resist physical damage.
+
+* Speed: Governs hit accuracy, evasion, and the ability to flee from battle.
+
+
+
+## 2. Turn Structure
+
+
+
+* Phases: The Player always acts first, followed by the Enemy.
+
+* Action Menu: The Player chooses between Attack, Item, Spell, or Run.
+
+* Enemy Action: The Enemy rolls a 1d6 to determine their move from a 6-slot move table.
+
+
+
+## 3. Accuracy & Hit Check (The 3d6 System)
+
+
+
+Attacks do not automatically hit. Accuracy relies on a tabletop-style 3d6 bell curve compared against the combatants' Speeds.
+
+* Formula: 3d6 + Attacker Speed vs 10 + Defender Speed
+
+* Execution: To hit, the Attacker's roll must be Greater Than or Equal To (>=) the Defender's Target AC.
+
+* Note: At equal speeds, 3d6 averages 10.5, resulting in a base hit chance of roughly 62.5%.
+
+
+
+## 4. Damage Calculation
+
+
+
+Damage is completely deterministic based on stats, with no random variance.
+
+* Formula: Attacker ATK - Defender DEF
+
+* Minimum Damage: Damage is always clamped to a minimum of 1 to ensure attacks never deal 0 damage.
+
+
+
+## 5. Status Effects
+
+
+
+Combatants can be afflicted by one status effect at a time (tracked as integers 1 through 4):
+
+* Status 1 (Poison): Afflicted combatant takes 1d3 poison damage at the end of their turn.
+
+* Status 2 (Sleep): Afflicted combatant rolls 1d6 at the start of their turn. On a 5 or 6, they wake up and act. On a 1 to 4, they remain asleep and skip their turn.
+
+* Status 3 (Blind): Afflicted combatant suffers a -3 penalty to their 3d6 Accuracy Roll when attacking.
+
+* Status 4 (Silence): Blocks the afflicted combatant from using the "Cast a Spell" command.
+
+
+
+## 6. Fleeing Battle
+
+
+
+Escaping a battle requires a standard 1d20 check based on Speed.
+
+* Formula: Hero Speed + 1d20 > Monster Speed + 15
+
+* Success: Battle ends immediately and returns to the overworld.
+
+* Failure: Turn is wasted, and the Enemy gets to attack.
+
+
+
+## 7. Enemy AI (Move Tables)
+
+
+
+Enemies execute actions based on a 6-slot randomized move table (Move_1 through Move_6).
+
+* Viper Example: Strikes on 1-5, spits Poison Spores on a 6.
+
+* Trasgu Example: Strikes on 1-3, uses Screech on 4-5, Dances on a 6.

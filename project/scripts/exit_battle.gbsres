@@ -1,0 +1,18 @@
+{
+  "_resourceType": "script",
+  "id": "0cc71756-3ac1-446c-a2fb-7f4afe218a3b",
+  "name": "Exit_Battle",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_7",
+  "script": [
+    {
+      "command": "EVENT_SCENE_POP_STATE",
+      "args": {
+        "fadeSpeed": "2"
+      },
+      "id": "db8c6225-75b0-4108-8fba-7e38871c5bc2"
+    }
+  ]
+}

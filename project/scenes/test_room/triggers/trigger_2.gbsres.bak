@@ -1,0 +1,111 @@
+{
+  "_resourceType": "trigger",
+  "id": "accedbb3-ac55-4428-8d0d-646d97ead3a6",
+  "name": "",
+  "prefabId": "",
+  "x": 14,
+  "y": 0,
+  "symbol": "trigger_9",
+  "prefabScriptOverrides": {},
+  "width": 6,
+  "height": 6,
+  "script": [
+    {
+      "command": "EVENT_SET_TIMER_SCRIPT",
+      "args": {
+        "timer": 1,
+        "duration": 0.3,
+        "frames": 30,
+        "__scriptTabs": "end"
+      },
+      "children": {
+        "script": [
+          {
+            "command": "EVENT_IF_INPUT",
+            "args": {
+              "input": [
+                "right",
+                "down",
+                "up",
+                "left"
+              ],
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "T0",
+                    "operation": "set",
+                    "other": "rnd",
+                    "vectorY": "L0",
+                    "value": "0",
+                    "minValue": 1,
+                    "maxValue": 10,
+                    "clamp": false
+                  },
+                  "id": "32072389-f8a7-4977-bc62-bb1352befab0"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "lte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "T0"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 2
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_TIMER_DISABLE",
+                        "args": {
+                          "timer": 1
+                        },
+                        "id": "b3a4da17-face-41b4-a712-1cfd5938a40d"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "35c43120-d747-42cc-a4e7-b941fdc9ab62",
+                          "$variable[V0]$": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "cf59d590-499a-4537-b3c2-17764bcb41d7"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "7e374810-0bdf-4c9e-b329-46df000851d2"
+                }
+              ],
+              "false": []
+            },
+            "id": "ee4e73f1-d14f-4ed2-8fad-47bd4c56d5a6"
+          }
+        ]
+      },
+      "id": "f97aca83-378c-474c-90b6-0f200db3dc1c"
+    }
+  ],
+  "leaveScript": [
+    {
+      "command": "EVENT_TIMER_DISABLE",
+      "args": {
+        "timer": 1
+      },
+      "id": "dbb45993-8ffc-499a-b8f3-fe4df802f7a2"
+    }
+  ],
+  "_index": 1
+}

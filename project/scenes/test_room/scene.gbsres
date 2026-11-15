@@ -3,7 +3,7 @@
   "id": "aaf1cce0-7739-43c1-afed-b8ebaed97b1e",
   "_index": 1,
   "name": "Test Room",
-  "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+  "backgroundId": "6261db3f-13c9-449d-8eb0-bb79047259a9",
   "tilesetId": "",
   "width": 20,
   "height": 18,
@@ -16,9 +16,49 @@
   "symbol": "scene_2",
   "x": 856,
   "y": 30,
-  "script": [],
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "37"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "7b0e47a7-5153-42b3-8887-3fd2939c74df"
+            },
+            "id": "cfc85e6a-cb02-4f38-8509-62ba3538fca3"
+          }
+        ],
+        "false": []
+      },
+      "id": "cfcc22e4-7097-40e7-b3e8-680e65ba9336"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "a07e57c8-a882-4169-85f1-5e5ba95927d1",
+        "__collapse": true
+      },
+      "id": "3a8cb876-87b3-401b-be1f-60c18cfc91fd"
+    }
+  ],
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],
-  "playerSpriteSheetId": "33d4a2ff-0302-46e9-bdeb-4d2fc59ca7c1"
+  "playerSpriteSheetId": "581d34d0-9591-4e6e-a609-1d94f203b0cd"
 }

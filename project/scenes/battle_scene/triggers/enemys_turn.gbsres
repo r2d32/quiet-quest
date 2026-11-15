@@ -405,7 +405,7 @@
                       {
                         "command": "EVENT_GROUP",
                         "args": {
-                          "__collapse": true,
+                          "__collapse": false,
                           "__label": "Attack hint move animation"
                         },
                         "children": {
@@ -560,6 +560,13 @@
                           "__collapse": false
                         },
                         "id": "b57a8fe8-c5de-4b66-a33e-861b1e14be25"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05"
+                        },
+                        "id": "e8ad95a9-6a0e-4c22-97d9-e22c2da15390"
                       }
                     ],
                     "true1": [],
@@ -630,22 +637,11 @@
                         "id": "7d72debc-4ce7-4a58-97db-337dc1e08b8a"
                       },
                       {
-                        "command": "EVENT_SWITCH_SCENE",
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
                         "args": {
-                          "sceneId": "9be29b87-ecaf-4247-b076-ac77fc14a5fa",
-                          "x": {
-                            "type": "number",
-                            "value": 19
-                          },
-                          "y": {
-                            "type": "number",
-                            "value": 17
-                          },
-                          "direction": "",
-                          "fadeSpeed": "2",
-                          "__collapse": false
+                          "customEventId": "0cc71756-3ac1-446c-a2fb-7f4afe218a3b"
                         },
-                        "id": "8373bde4-7359-4454-97f5-3e07028652c9"
+                        "id": "44621c22-82ee-4bbf-be45-935e9f62aede"
                       }
                     ],
                     "true3": [
@@ -1003,7 +999,7 @@
                   "args": {
                     "variable": "6",
                     "choices": 1,
-                    "__collapseCase0": true,
+                    "__collapseCase0": false,
                     "__collapseCase1": false,
                     "__collapseCase2": false,
                     "__collapseCase3": false,
@@ -1041,7 +1037,7 @@
                             "type": "number",
                             "value": 5
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "d293cce6-4908-451c-8bf8-c803a7785cc4"
                       },
@@ -1089,7 +1085,7 @@
                           "closeButton": "a",
                           "closeDelayTime": 0.5,
                           "closeDelayFrames": 30,
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "5d99d965-bfd8-42b1-a5e0-262c0a847f34"
                       },
@@ -1101,9 +1097,16 @@
                             "type": "expression",
                             "value": "$02$-$T0$"
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "ff9e507d-2aba-4331-af9b-3cc3b55797eb"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05"
+                        },
+                        "id": "7cecb56d-59d6-49f7-8f53-221d14c133e9"
                       },
                       {
                         "command": "EVENT_COMMENT",

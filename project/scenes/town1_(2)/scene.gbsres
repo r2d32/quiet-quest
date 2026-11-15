@@ -2,7 +2,7 @@
   "_resourceType": "scene",
   "id": "9be29b87-ecaf-4247-b076-ac77fc14a5fa",
   "_index": 0,
-  "name": "Town1",
+  "name": "Town1 (2)",
   "backgroundId": "462a3c58-a7cc-42dd-9861-1b75c63d1542",
   "tilesetId": "",
   "width": 40,
@@ -18,43 +18,11 @@
   "y": 304,
   "script": [
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "0"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 2
-          }
-        },
-        "__collapseElse": false,
-        "__collapse": false
+        "customEventId": "a07e57c8-a882-4169-85f1-5e5ba95927d1"
       },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_PLAYER_SET_SPRITE",
-            "args": {
-              "spriteSheetId": "b841083a-42a4-4f66-874d-46c798076621"
-            },
-            "id": "1911cb8f-d8ff-4463-b9e8-3f044760ca53"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_PLAYER_SET_SPRITE",
-            "args": {
-              "spriteSheetId": "33d4a2ff-0302-46e9-bdeb-4d2fc59ca7c1"
-            },
-            "id": "6b05c850-a060-4026-9125-7d19147fe39d"
-          }
-        ]
-      },
-      "id": "b4d44997-6082-44ac-8d3b-9b57892136ee"
+      "id": "9189fbd7-77ab-4701-bc6e-1062db0a8d1d"
     },
     {
       "command": "EVENT_LOOP_WHILE",
@@ -193,5 +161,5 @@
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],
-  "playerSpriteSheetId": "33d4a2ff-0302-46e9-bdeb-4d2fc59ca7c1"
+  "playerSpriteSheetId": "581d34d0-9591-4e6e-a609-1d94f203b0cd"
 }

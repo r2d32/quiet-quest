@@ -1,0 +1,61 @@
+==================================================
+GB STUDIO COMBAT: MOVE ID & ACTION REGISTRY
+==================================================
+
+[MOVE ID TABLE]
+ID 0: Basic Physical Attack
+  • Description: Standard attack using (MonsterATK - HeroDEF).
+  • Accuracy: Standard 3d6 (Needs 11+).
+  • Effect: Hero HP reduction, camera shake.
+  • Known By: All monsters (default Slot 1-3).
+
+ID 1: Poison Spores / Spit
+  • Description: Toxic projectile applying status.
+  • Accuracy: Standard 3d6 (Needs 11+).
+  • Effect: Sets HeroStatus = 1 ("Hero was poisoned!").
+  • Fallback: If HeroStatus == 1, downgrade to Move 0.
+  • Known By: Viper (Slot 6), Swamp Toad.
+
+ID 2: Screech
+  • Description: Ear-piercing noise causing panic.
+  • Accuracy: Standard 3d6 (Needs 11+) [or flat 12+ check].
+  • Effect: Aborts battle; transitions to Overworld.
+  • Known By: Trasgu (Slots 4, 5).
+
+ID 3: Taunt / Distraction
+  • Description: Weird dance / mocking gesture.
+  • Accuracy: Automatic.
+  • Effect: Flavor dialogue only; turn is skipped ("...nothing happened!").
+  • Known By: Trasgu (Slot 6).
+
+--------------------------------------------------
+[MONSTER TABLE LOADOUTS]
+
+Encounter_ID 1: Spitting Viper
+  • Stats: HP 16 | ATK 5 | DEF 1 | SPD 2
+  • Slots: [0, 0, 0, 0, 0, 10] 
+  • Odds: 83.3% Attack, 16.7% Poison
+
+Encounter_ID 2: Trasgu
+  • Stats: HP 12 | ATK 5 | DEF 2 | SPD 4
+  • Slots: [0, 0, 0, 2, 2, 3]  
+  • Odds: 50.0% Attack, 33.3% Screech, 16.7% Taunt
+--------------------------------------------------
+==================================================
+
+
+
+
+--- MOVE ID BLOCKS ---
+[0 - 9]: Direct Attacks / Utility
+  • Move 0: Normal Physical Strike
+  • Move 2: Screech (Flee)
+  • Move 3: Taunt / Mock (Flavor/Skip)
+  • Move 6: Heavy Bash (Ignore DEF)
+  • Move 7: Fire Breath (Direct Magic Damage)
+
+[10 - 19]: Reserved Status-Inflicting Moves
+  • Move 10: Poison Spores / Spit    --> Sets Global_HeroStatus = 1
+  • Move 11: Sweet Scent / Lullaby   --> Sets Global_HeroStatus = 2 (Sleep)
+  • Move 12: Sand Throw / Flash      --> Sets Global_HeroStatus = 3 (Blind/Dazzle)
+  • Move 13: Mute Cloud / Curse      --> Sets Global_HeroStatus = 4 (Fizzle)

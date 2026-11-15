@@ -1,0 +1,112 @@
+{
+  "_resourceType": "script",
+  "id": "7b0e47a7-5153-42b3-8887-3fd2939c74df",
+  "name": "Init_New_Game",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_5",
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": false,
+        "__label": "Set Other Player Starting Variables"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "false"
+              }
+            },
+            "id": "fc6ade50-5bee-48f8-b4ff-945fee212edb"
+          }
+        ]
+      },
+      "id": "23c0061c-76b1-4938-9254-a20876802332"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": false,
+        "__label": "Set Player Starting Stats"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "1",
+              "value": {
+                "type": "number",
+                "value": 20
+              }
+            },
+            "id": "20646cd8-65c0-4ad5-80e6-fcc94b49d9de"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "2",
+              "value": {
+                "type": "variable",
+                "value": "1"
+              }
+            },
+            "id": "ffe78078-d331-4a85-a803-26312409417d"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "3",
+              "value": {
+                "type": "number",
+                "value": 5
+              },
+              "__collapse": false
+            },
+            "id": "4a274ec2-c901-4616-b403-faf45ddea216"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "4",
+              "value": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "3f6048ba-335e-4812-9867-c2fd18f82faf"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "5",
+              "value": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "a01ba930-8f87-4d4f-8b52-3dad18fdd21e"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "6",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "c8fdb2b3-c3d4-4d7d-a67e-ffa9e69fbc98"
+          }
+        ]
+      },
+      "id": "838d7204-15be-452c-886f-303d48ef3727"
+    }
+  ]
+}
