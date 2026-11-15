@@ -187,11 +187,6 @@
       "symbol": "var_attack_roll_local_0"
     },
     {
-      "id": "3ab707fb-d211-4aeb-84e3-715c6c9fcff8__L0",
-      "name": "Row",
-      "symbol": "var_row"
-    },
-    {
       "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L0",
       "name": "Battle_EnemySlotChoice",
       "symbol": "var_battle_enemyslotchoice_"
@@ -265,6 +260,11 @@
       "id": "9be29b87-ecaf-4247-b076-ac77fc14a5fa__L0",
       "name": "pla",
       "symbol": "var_pla"
+    },
+    {
+      "id": "3ab707fb-d211-4aeb-84e3-715c6c9fcff8__L0",
+      "name": "Local 0",
+      "symbol": "var_local_2"
     }
   ],
   "constants": []
