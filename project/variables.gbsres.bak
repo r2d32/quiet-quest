@@ -290,6 +290,11 @@
       "id": "41",
       "name": "Temp_PoisonDamage",
       "symbol": "var_temp_poisondamage"
+    },
+    {
+      "id": "aaf1cce0-7739-43c1-afed-b8ebaed97b1e__L0",
+      "name": "Local 0",
+      "symbol": "var_local_0"
     }
   ],
   "constants": []

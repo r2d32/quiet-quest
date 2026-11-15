@@ -1173,7 +1173,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Enemy Attack Randomizer",
-        "__collapse": false
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -1322,7 +1322,7 @@
     {
       "command": "EVENT_GROUP",
       "args": {
-        "__collapse": false,
+        "__collapse": true,
         "__label": "Change move Status to normal if hero has status already"
       },
       "children": {
@@ -1363,7 +1363,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Hit and Damage Resolution (Contains Switch with moves)",
-        "__collapse": false
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -2009,84 +2009,6 @@
       "command": "EVENT_GROUP",
       "args": {
         "__collapse": false,
-        "__label": "Check if Hero died"
-      },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_IF",
-            "args": {
-              "condition": {
-                "type": "lte",
-                "valueA": {
-                  "type": "variable",
-                  "value": "2"
-                },
-                "valueB": {
-                  "type": "number",
-                  "value": 0
-                }
-              },
-              "__collapseElse": false,
-              "__collapse": false
-            },
-            "children": {
-              "true": [
-                {
-                  "command": "EVENT_TEXT",
-                  "args": {
-                    "text": [
-                      "Hero has fallen..."
-                    ],
-                    "__section": "text",
-                    "avatarId": "",
-                    "minHeight": 4,
-                    "maxHeight": 7,
-                    "textX": 1,
-                    "textY": 1,
-                    "textHeight": 5,
-                    "position": "bottom",
-                    "clearPrevious": true,
-                    "showFrame": "true",
-                    "speedIn": -1,
-                    "speedOut": -1,
-                    "closeWhen": "key",
-                    "closeButton": "a",
-                    "closeDelayTime": 0.5,
-                    "closeDelayFrames": 30
-                  },
-                  "id": "db770afb-f1b1-493c-8d43-feede1d9c3ac"
-                },
-                {
-                  "command": "EVENT_SWITCH_SCENE",
-                  "args": {
-                    "sceneId": "87286b11-b375-4c8e-9055-5a84a59dcd06",
-                    "x": {
-                      "type": "number",
-                      "value": 0
-                    },
-                    "y": {
-                      "type": "number",
-                      "value": 0
-                    },
-                    "direction": "",
-                    "fadeSpeed": "2"
-                  },
-                  "id": "0f25cca4-285d-4430-8117-c252068085fa"
-                }
-              ],
-              "false": []
-            },
-            "id": "dc304997-502b-47a6-940b-b0d7be11631e"
-          }
-        ]
-      },
-      "id": "1a90b4e3-d319-4fc7-a6d1-54826f2b1b47"
-    },
-    {
-      "command": "EVENT_GROUP",
-      "args": {
-        "__collapse": false,
         "__label": "Check Poison Damage"
       },
       "children": {
@@ -2106,8 +2028,8 @@
             "command": "EVENT_IF",
             "args": {
               "condition": {
-                "type": "variable",
-                "value": "6"
+                "type": "expression",
+                "value": "$06$==1 && $02$>0"
               },
               "__collapseElse": false,
               "__collapse": false
@@ -2222,24 +2144,10 @@
                         "id": "ff9e507d-2aba-4331-af9b-3cc3b55797eb"
                       },
                       {
-                        "command": "EVENT_CALL_CUSTOM_EVENT",
-                        "args": {
-                          "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05"
-                        },
-                        "id": "7cecb56d-59d6-49f7-8f53-221d14c133e9"
-                      },
-                      {
-                        "command": "EVENT_COMMENT",
-                        "args": {
-                          "text": "Check to see if you died"
-                        },
-                        "id": "d94114eb-85ca-469d-a05d-725e0e5460ad"
-                      },
-                      {
                         "command": "EVENT_IF",
                         "args": {
                           "condition": {
-                            "type": "lte",
+                            "type": "lt",
                             "valueA": {
                               "type": "variable",
                               "value": "2"
@@ -2249,59 +2157,32 @@
                               "value": 0
                             }
                           },
-                          "__collapseElse": true,
-                          "__collapse": false
+                          "__collapseElse": true
                         },
                         "children": {
                           "true": [
                             {
-                              "command": "EVENT_TEXT",
+                              "command": "EVENT_SET_VALUE",
                               "args": {
-                                "text": [
-                                  "You Died"
-                                ],
-                                "__section": "text",
-                                "avatarId": "",
-                                "minHeight": 4,
-                                "maxHeight": 7,
-                                "textX": 1,
-                                "textY": 1,
-                                "textHeight": 5,
-                                "position": "bottom",
-                                "clearPrevious": true,
-                                "showFrame": "true",
-                                "speedIn": -1,
-                                "speedOut": -1,
-                                "closeWhen": "key",
-                                "closeButton": "a",
-                                "closeDelayTime": 0.5,
-                                "closeDelayFrames": 30,
-                                "__collapse": true
-                              },
-                              "id": "a60a4d76-3c2a-4ba5-aa50-0d336b8dcede"
-                            },
-                            {
-                              "command": "EVENT_SWITCH_SCENE",
-                              "args": {
-                                "sceneId": "87286b11-b375-4c8e-9055-5a84a59dcd06",
-                                "x": {
+                                "variable": "2",
+                                "value": {
                                   "type": "number",
-                                  "value": 19
-                                },
-                                "y": {
-                                  "type": "number",
-                                  "value": 17
-                                },
-                                "direction": "",
-                                "fadeSpeed": "2",
-                                "__collapse": false
+                                  "value": 0
+                                }
                               },
-                              "id": "3f0acb7d-cd80-4b24-a6e8-94446f3ee44a"
+                              "id": "9725c868-bc46-4c6b-ad44-4dad04b22636"
                             }
                           ],
                           "false": []
                         },
-                        "id": "2f7ad4c9-c2db-465d-a660-ace36209d753"
+                        "id": "e7a6da1d-c0c6-4964-a065-0e2135bba051"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05"
+                        },
+                        "id": "7cecb56d-59d6-49f7-8f53-221d14c133e9"
                       }
                     ],
                     "true1": [],
@@ -2331,6 +2212,14 @@
         ]
       },
       "id": "49ccbfa2-75f6-4666-9b01-6f00dcdae346"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "4e996d8e-41dd-4505-8189-f951bfef7194",
+        "__collapse": true
+      },
+      "id": "8c39af90-6eff-4eb5-a140-6f25b637c466"
     },
     {
       "command": "EVENT_ACTOR_SET_POSITION",
@@ -2544,17 +2433,6 @@
                   "id": "a5b8de65-6c33-4ad2-8861-9d02207b90a7"
                 },
                 {
-                  "command": "EVENT_GROUP",
-                  "args": {
-                    "__collapse": false,
-                    "__label": "Check if hero awakes or not"
-                  },
-                  "children": {
-                    "true": []
-                  },
-                  "id": "602904c6-399c-4391-98df-30b0b0c909b3"
-                },
-                {
                   "command": "EVENT_IF",
                   "args": {
                     "condition": {
@@ -2611,57 +2489,56 @@
                         "id": "f45960a1-588d-4e72-9a06-25f65de1d8ed"
                       }
                     ],
-                    "false": []
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Hero is \nsound asleep..."
+                          ],
+                          "__section": "behavior",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": 0,
+                          "speedOut": 0,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30,
+                          "__collapse": false
+                        },
+                        "id": "fcc7fdf4-21cb-4b4d-80a6-d636ecdc9d9d"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 8
+                          }
+                        },
+                        "id": "4dfcaf05-9396-4d8e-9cd3-e49f69020878"
+                      },
+                      {
+                        "command": "EVENT_STOP",
+                        "args": {},
+                        "id": "a5dff994-46ef-4e18-ae15-d94f6c9aa734"
+                      }
+                    ]
                   },
                   "id": "fe14fc7d-eb1a-4c84-a58b-a30a350b65a3"
-                },
-                {
-                  "command": "EVENT_TEXT",
-                  "args": {
-                    "text": [
-                      "Hero is \nsound asleep..."
-                    ],
-                    "__section": "behavior",
-                    "avatarId": "",
-                    "minHeight": 4,
-                    "maxHeight": 7,
-                    "textX": 1,
-                    "textY": 1,
-                    "textHeight": 5,
-                    "position": "bottom",
-                    "clearPrevious": true,
-                    "showFrame": "true",
-                    "speedIn": 0,
-                    "speedOut": 0,
-                    "closeWhen": "key",
-                    "closeButton": "a",
-                    "closeDelayTime": 0.5,
-                    "closeDelayFrames": 30,
-                    "__collapse": false
-                  },
-                  "id": "fcc7fdf4-21cb-4b4d-80a6-d636ecdc9d9d"
-                },
-                {
-                  "command": "EVENT_ACTOR_MOVE_TO",
-                  "args": {
-                    "__section": "movement",
-                    "actorId": "$self$",
-                    "x": {
-                      "type": "number",
-                      "value": 9
-                    },
-                    "y": {
-                      "type": "number",
-                      "value": 8
-                    },
-                    "collideWith": [
-                      "walls"
-                    ],
-                    "lockDirection": [],
-                    "moveType": "horizontal",
-                    "__collapse": false
-                  },
-                  "id": "202f8400-e2fb-404d-a46b-fcf2dc23f921"
                 }
               ],
               "false": []
@@ -3744,6 +3621,107 @@
   ],
   "leaveScript": [],
   "_index": 0
+}
+=== project/scripts/check_if_hero_died.gbsres ===
+{
+  "_resourceType": "script",
+  "id": "4e996d8e-41dd-4505-8189-f951bfef7194",
+  "name": "Check_If_Hero_Died",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_12",
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": false,
+        "__label": "Check if Hero died"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "lte",
+                "valueA": {
+                  "type": "variable",
+                  "value": "2"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Hero has fallen..."
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "b4e0f072-54db-4e7f-a61c-005ec5725414"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "6",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "74490305-30c9-497f-9a1f-adcf531be6e8"
+                },
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "87286b11-b375-4c8e-9055-5a84a59dcd06",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "",
+                    "fadeSpeed": "2"
+                  },
+                  "id": "85941743-1580-44bb-b7a2-195d412213ab"
+                }
+              ],
+              "false": []
+            },
+            "id": "9d85db1c-5b99-4a9e-8381-a36c39fd73bd"
+          }
+        ]
+      },
+      "id": "1695b057-b6e9-49b5-8fc1-d9c993a4515b"
+    }
+  ]
 }
 === project/scripts/check_overworld_poison.gbsres ===
 {
@@ -6316,8 +6294,8 @@
     },
     {
       "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L0",
-      "name": "Battle_EnemySlotChoice",
-      "symbol": "var_battle_enemyslotchoice_"
+      "name": "c",
+      "symbol": "var_c"
     },
     {
       "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L1",

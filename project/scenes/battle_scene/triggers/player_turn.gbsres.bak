@@ -52,17 +52,6 @@
                   "id": "a5b8de65-6c33-4ad2-8861-9d02207b90a7"
                 },
                 {
-                  "command": "EVENT_GROUP",
-                  "args": {
-                    "__collapse": false,
-                    "__label": "Check if hero awakes or not"
-                  },
-                  "children": {
-                    "true": []
-                  },
-                  "id": "602904c6-399c-4391-98df-30b0b0c909b3"
-                },
-                {
                   "command": "EVENT_IF",
                   "args": {
                     "condition": {
@@ -119,57 +108,63 @@
                         "id": "f45960a1-588d-4e72-9a06-25f65de1d8ed"
                       }
                     ],
-                    "false": []
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Hero is \nsound asleep..."
+                          ],
+                          "__section": "behavior",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": 0,
+                          "speedOut": 0,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30,
+                          "__collapse": false
+                        },
+                        "id": "fcc7fdf4-21cb-4b4d-80a6-d636ecdc9d9d"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "__section": "movement",
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 8
+                          },
+                          "collideWith": [
+                            "walls"
+                          ],
+                          "lockDirection": [],
+                          "moveType": "horizontal",
+                          "__collapse": false
+                        },
+                        "id": "202f8400-e2fb-404d-a46b-fcf2dc23f921"
+                      },
+                      {
+                        "command": "EVENT_STOP",
+                        "args": {},
+                        "id": "a5dff994-46ef-4e18-ae15-d94f6c9aa734"
+                      }
+                    ]
                   },
                   "id": "fe14fc7d-eb1a-4c84-a58b-a30a350b65a3"
-                },
-                {
-                  "command": "EVENT_TEXT",
-                  "args": {
-                    "text": [
-                      "Hero is \nsound asleep..."
-                    ],
-                    "__section": "behavior",
-                    "avatarId": "",
-                    "minHeight": 4,
-                    "maxHeight": 7,
-                    "textX": 1,
-                    "textY": 1,
-                    "textHeight": 5,
-                    "position": "bottom",
-                    "clearPrevious": true,
-                    "showFrame": "true",
-                    "speedIn": 0,
-                    "speedOut": 0,
-                    "closeWhen": "key",
-                    "closeButton": "a",
-                    "closeDelayTime": 0.5,
-                    "closeDelayFrames": 30,
-                    "__collapse": false
-                  },
-                  "id": "fcc7fdf4-21cb-4b4d-80a6-d636ecdc9d9d"
-                },
-                {
-                  "command": "EVENT_ACTOR_MOVE_TO",
-                  "args": {
-                    "__section": "movement",
-                    "actorId": "$self$",
-                    "x": {
-                      "type": "number",
-                      "value": 9
-                    },
-                    "y": {
-                      "type": "number",
-                      "value": 8
-                    },
-                    "collideWith": [
-                      "walls"
-                    ],
-                    "lockDirection": [],
-                    "moveType": "horizontal",
-                    "__collapse": false
-                  },
-                  "id": "202f8400-e2fb-404d-a46b-fcf2dc23f921"
                 }
               ],
               "false": []

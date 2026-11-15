@@ -110,28 +110,6 @@
                     ],
                     "false": [
                       {
-                        "command": "EVENT_ACTOR_MOVE_TO",
-                        "args": {
-                          "__section": "movement",
-                          "actorId": "$self$",
-                          "x": {
-                            "type": "number",
-                            "value": 9
-                          },
-                          "y": {
-                            "type": "number",
-                            "value": 8
-                          },
-                          "collideWith": [
-                            "walls"
-                          ],
-                          "lockDirection": [],
-                          "moveType": "horizontal",
-                          "__collapse": false
-                        },
-                        "id": "202f8400-e2fb-404d-a46b-fcf2dc23f921"
-                      },
-                      {
                         "command": "EVENT_TEXT",
                         "args": {
                           "text": [
@@ -156,6 +134,26 @@
                           "__collapse": false
                         },
                         "id": "fcc7fdf4-21cb-4b4d-80a6-d636ecdc9d9d"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 8
+                          }
+                        },
+                        "id": "4dfcaf05-9396-4d8e-9cd3-e49f69020878"
+                      },
+                      {
+                        "command": "EVENT_STOP",
+                        "args": {},
+                        "id": "a5dff994-46ef-4e18-ae15-d94f6c9aa734"
                       }
                     ]
                   },
