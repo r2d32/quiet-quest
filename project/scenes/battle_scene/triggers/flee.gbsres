@@ -85,64 +85,50 @@
             "id": "43de681e-cf17-4dda-b755-2acd2afd129b"
           }
         ],
-        "false": []
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You couldn't get\naway"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "a316905d-5b93-446e-b9dd-2d069a2f5dc6"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              }
+            },
+            "id": "ede7e399-8a60-4e1a-9cf8-d71194a885b5"
+          }
+        ]
       },
       "id": "6895fa1a-203e-4b95-af6a-ec29910bc5a0"
-    },
-    {
-      "command": "EVENT_COMMENT",
-      "args": {
-        "text": "You could not escape",
-        "__collapse": true
-      },
-      "id": "5a55729e-8c93-4d46-a8b6-0cb4e8db74ea"
-    },
-    {
-      "command": "EVENT_TEXT",
-      "args": {
-        "text": [
-          "You couldn't get\naway"
-        ],
-        "__section": "text",
-        "avatarId": "",
-        "minHeight": 4,
-        "maxHeight": 7,
-        "textX": 1,
-        "textY": 1,
-        "textHeight": 5,
-        "position": "bottom",
-        "clearPrevious": true,
-        "showFrame": "true",
-        "speedIn": -1,
-        "speedOut": -1,
-        "closeWhen": "key",
-        "closeButton": "a",
-        "closeDelayTime": 0.5,
-        "closeDelayFrames": 30
-      },
-      "id": "a316905d-5b93-446e-b9dd-2d069a2f5dc6"
-    },
-    {
-      "command": "EVENT_COMMENT",
-      "args": {
-        "text": "Now its the monster's turn"
-      },
-      "id": "d3ea5add-88e7-43e1-a84a-34252ce0bd98"
-    },
-    {
-      "command": "EVENT_ACTOR_SET_POSITION",
-      "args": {
-        "actorId": "$self$",
-        "x": {
-          "type": "number",
-          "value": 9
-        },
-        "y": {
-          "type": "number",
-          "value": 8
-        }
-      },
-      "id": "ede7e399-8a60-4e1a-9cf8-d71194a885b5"
     }
   ],
   "leaveScript": [],

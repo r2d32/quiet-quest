@@ -67,7 +67,7 @@
                       "type": "variable",
                       "value": "17"
                     },
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "id": "51bbb186-7342-4688-9b3d-f39f4abd3685"
                 }
@@ -81,7 +81,7 @@
                       "type": "variable",
                       "value": "18"
                     },
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "id": "0f0669ad-73f9-42a5-a667-cf3a73cad503"
                 }
@@ -95,7 +95,7 @@
                       "type": "variable",
                       "value": "19"
                     },
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "id": "cf2d1d4e-6b6c-4411-8b0e-acd0062ae743"
                 }
@@ -109,7 +109,7 @@
                       "type": "variable",
                       "value": "20"
                     },
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "id": "c1c67d07-32a6-4ea4-a492-06d6f95ba3b7"
                 }
@@ -123,7 +123,7 @@
                       "type": "variable",
                       "value": "21"
                     },
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "id": "38c306cb-1268-4271-b933-d2669236e75a"
                 }
@@ -137,7 +137,7 @@
                       "type": "variable",
                       "value": "22"
                     },
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "id": "363c40bc-49e2-4450-a241-ef4878c0dbb9"
                 }
@@ -203,83 +203,52 @@
     {
       "command": "EVENT_GROUP",
       "args": {
-        "__label": "Roll 3d6 Accuracy Check",
-        "__collapse": false
-      },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_VARIABLE_MATH",
-            "args": {
-              "vectorX": "L1",
-              "operation": "set",
-              "other": "rnd",
-              "vectorY": "L0",
-              "value": "0",
-              "minValue": 1,
-              "maxValue": 6,
-              "clamp": false,
-              "__collapse": false
-            },
-            "id": "e6b1c9ad-658e-4bdf-8087-aecfe4b9962a"
-          },
-          {
-            "command": "EVENT_VARIABLE_MATH",
-            "args": {
-              "vectorX": "L1",
-              "operation": "add",
-              "other": "rnd",
-              "vectorY": "L0",
-              "value": "0",
-              "minValue": 1,
-              "maxValue": 6,
-              "clamp": false,
-              "__collapse": false
-            },
-            "id": "e3a65bbb-f996-4ded-9e25-879bddad1823"
-          },
-          {
-            "command": "EVENT_VARIABLE_MATH",
-            "args": {
-              "vectorX": "L1",
-              "operation": "add",
-              "other": "rnd",
-              "vectorY": "L0",
-              "value": "0",
-              "minValue": 1,
-              "maxValue": 6,
-              "clamp": false,
-              "__collapse": false
-            },
-            "id": "51c0e3df-b6dc-40fb-a697-3078ae329457"
-          }
-        ]
-      },
-      "id": "8981aca0-3f2c-48ff-a7e9-8732ff246a31"
-    },
-    {
-      "command": "EVENT_GROUP",
-      "args": {
         "__label": "Hit and Damage Resolution (Contains Switch with moves)",
         "__collapse": false
       },
       "children": {
         "true": [
           {
-            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "variable": "L3",
-              "expression": "10+$05$-$11$",
-              "__collapse": false
+              "customEventId": "3987e247-fbaa-4a0d-8d4d-03c491564fea",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "9"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "11"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "12"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "10"
+              },
+              "$variable[V4]$": {
+                "type": "variable",
+                "value": "5"
+              },
+              "$variable[V5]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V6]$": {
+                "type": "variable",
+                "value": "L4"
+              }
             },
-            "id": "dfa1a07d-93b3-4a5d-b52a-b3242f785371"
+            "id": "5c124e02-2f2e-4b99-a218-7dd62ae61ef8"
           },
           {
             "command": "EVENT_IF",
             "args": {
               "condition": {
                 "type": "expression",
-                "value": "$L1$>=$L3$"
+                "value": "$L1$==$L3$"
               },
               "__collapseElse": false,
               "__collapse": false
@@ -405,7 +374,7 @@
                       {
                         "command": "EVENT_GROUP",
                         "args": {
-                          "__collapse": true,
+                          "__collapse": false,
                           "__label": "Attack hint move animation"
                         },
                         "children": {
@@ -487,7 +456,7 @@
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
                           "variable": "2",
-                          "expression": "$02$-($09$-$04$)"
+                          "expression": "$02$-$L4$"
                         },
                         "id": "87f3e8c0-52de-45b9-a7f7-1a4a4abf9616"
                       },
@@ -528,14 +497,6 @@
                         "id": "47b8cb71-57c4-4756-9c12-6101647cc205"
                       },
                       {
-                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
-                        "args": {
-                          "variable": "L4",
-                          "expression": "$09$-$04$"
-                        },
-                        "id": "1407d09f-7ffd-436c-8f14-8ff0e86e92fa"
-                      },
-                      {
                         "command": "EVENT_TEXT",
                         "args": {
                           "text": [
@@ -560,6 +521,13 @@
                           "__collapse": false
                         },
                         "id": "b57a8fe8-c5de-4b66-a33e-861b1e14be25"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05"
+                        },
+                        "id": "e8ad95a9-6a0e-4c22-97d9-e22c2da15390"
                       }
                     ],
                     "true1": [],
@@ -992,7 +960,7 @@
                   "args": {
                     "variable": "6",
                     "choices": 1,
-                    "__collapseCase0": true,
+                    "__collapseCase0": false,
                     "__collapseCase1": false,
                     "__collapseCase2": false,
                     "__collapseCase3": false,
@@ -1030,7 +998,7 @@
                             "type": "number",
                             "value": 5
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "d293cce6-4908-451c-8bf8-c803a7785cc4"
                       },
@@ -1078,7 +1046,7 @@
                           "closeButton": "a",
                           "closeDelayTime": 0.5,
                           "closeDelayFrames": 30,
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "5d99d965-bfd8-42b1-a5e0-262c0a847f34"
                       },
@@ -1090,9 +1058,16 @@
                             "type": "expression",
                             "value": "$02$-$T0$"
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "ff9e507d-2aba-4331-af9b-3cc3b55797eb"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05"
+                        },
+                        "id": "7cecb56d-59d6-49f7-8f53-221d14c133e9"
                       },
                       {
                         "command": "EVENT_COMMENT",

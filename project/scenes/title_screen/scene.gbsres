@@ -26,10 +26,15 @@
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
+          {
+            "command": "EVENT_RNG_SEED",
+            "args": {},
+            "id": "0e1701be-59b9-45ff-a7c0-8ba5553e7ca5"
+          },
           {
             "command": "EVENT_SWITCH_SCENE",
             "args": {

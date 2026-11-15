@@ -18,17 +18,6 @@
   "y": 304,
   "script": [
     {
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "38",
-        "value": {
-          "type": "number",
-          "value": 2
-        }
-      },
-      "id": "95a35db4-ac3e-4e91-83d9-d79b77fe5338"
-    },
-    {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
         "customEventId": "a07e57c8-a882-4169-85f1-5e5ba95927d1"

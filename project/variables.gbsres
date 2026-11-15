@@ -193,8 +193,8 @@
     },
     {
       "id": "87ebcd12-579b-4237-9562-292e5b98404a__L0",
-      "name": "Attack Roll (Local 0)",
-      "symbol": "var_attack_roll_local_0"
+      "name": "DidItHit",
+      "symbol": "var_didithit_0"
     },
     {
       "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L0",
@@ -203,8 +203,8 @@
     },
     {
       "id": "d6b0cbf8-5576-486a-b11d-a4be18121b95__L1",
-      "name": "BattleAttackRollSum",
-      "symbol": "var_battleattackrollsum"
+      "name": "DidItHit",
+      "symbol": "var_didithit"
     },
     {
       "id": "3ab707fb-d211-4aeb-84e3-715c6c9fcff8__16",

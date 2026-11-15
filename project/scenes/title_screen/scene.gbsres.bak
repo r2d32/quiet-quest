@@ -26,7 +26,7 @@
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": false
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -63,7 +63,7 @@
           "value": 18
         },
         "speed": 0,
-        "__collapse": false
+        "__collapse": true
       },
       "id": "8ea8159d-68b2-4b1e-9469-579d04ed8fd8"
     },
@@ -71,7 +71,7 @@
       "command": "EVENT_ACTOR_HIDE",
       "args": {
         "actorId": "$self$",
-        "__collapse": false
+        "__collapse": true
       },
       "id": "607674de-b2a3-44f1-8182-1daced59d195"
     },
@@ -79,7 +79,7 @@
       "command": "EVENT_FADE_IN",
       "args": {
         "speed": 1,
-        "__collapse": false
+        "__collapse": true
       },
       "id": "2c3cced0-31d1-4410-8719-260d9aef06f5"
     },
@@ -95,136 +95,16 @@
           "value": 0
         },
         "speed": 0.5,
-        "__collapse": false
+        "__collapse": true
       },
       "id": "b0ae4e0e-473f-41c1-826d-66efc287b6dc"
     },
     {
-      "command": "EVENT_GROUP",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "__collapse": false,
-        "__label": "Set Other Player Starting Variables"
+        "customEventId": "7b0e47a7-5153-42b3-8887-3fd2939c74df"
       },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "13",
-              "value": {
-                "type": "false"
-              }
-            },
-            "id": "7437b52f-3826-4ec1-910a-4b937f08585f"
-          }
-        ]
-      },
-      "id": "fe36e4f3-79cb-4eaa-bce4-a3bdf4f31c76"
-    },
-    {
-      "command": "EVENT_GROUP",
-      "args": {
-        "__collapse": false,
-        "__label": "Set Player Starting Stats"
-      },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "1",
-              "value": {
-                "type": "number",
-                "value": 20
-              }
-            },
-            "id": "1ec442e6-fd52-4f4f-b833-a7858eb5cadc"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "2",
-              "value": {
-                "type": "variable",
-                "value": "1"
-              }
-            },
-            "id": "6a6771c4-a953-4d0f-b86e-f89558d4c385"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "3",
-              "value": {
-                "type": "number",
-                "value": 5
-              },
-              "__collapse": false
-            },
-            "id": "80ed490e-3277-44ac-bb68-982f56ab7c33"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "4",
-              "value": {
-                "type": "number",
-                "value": 3
-              }
-            },
-            "id": "aa6664cf-658a-4aba-b89e-f7f60efad1b2"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "5",
-              "value": {
-                "type": "number",
-                "value": 4
-              }
-            },
-            "id": "c170b77d-4e09-47f0-89bf-b113b531fb15"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "6",
-              "value": {
-                "type": "number",
-                "value": 0
-              }
-            },
-            "id": "32158189-05f8-4fd3-b1e3-78d265001c85"
-          }
-        ]
-      },
-      "id": "56bb70b2-b8ad-47d6-bfc7-338d1248d3b3"
-    },
-    {
-      "command": "EVENT_COMMENT",
-      "args": {
-        "text": "This event will pause the game until the player presses the start button, a or b. The difference in time it takes a player to press any of these buttons will impact how our random number sequence is generated!"
-      },
-      "id": "33574f09-639d-44e7-b925-a8b3a5e20928"
-    },
-    {
-      "command": "EVENT_AWAIT_INPUT",
-      "args": {
-        "input": [
-          "a",
-          "b",
-          "start"
-        ],
-        "__collapse": false
-      },
-      "id": "f2d689e1-ad70-4942-81f5-0e127cc4e5a7"
-    },
-    {
-      "command": "EVENT_COMMENT",
-      "args": {
-        "text": "Once the player presses start a or b, our battle will begin. We'll now generate our Random Seed,and change the scene to the battle. "
-      },
-      "id": "55ce5483-171a-4578-995b-5c5a4a07e5f8"
+      "id": "816e3a66-d357-49ef-925b-8b491953e580"
     }
   ],
   "playerHit1Script": [],

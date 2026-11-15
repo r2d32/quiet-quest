@@ -25,14 +25,6 @@
       "id": "939b618f-6f24-42c1-8c7d-128b2a42d446"
     },
     {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05",
-        "__collapse": true
-      },
-      "id": "ef7116e6-e466-4c67-b04e-d18fbec373cf"
-    },
-    {
       "command": "EVENT_GROUP",
       "args": {
         "__collapse": true,
@@ -294,6 +286,17 @@
         }
       },
       "id": "7bc82286-e6e4-41bd-97d9-3806be9a50fe"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "32",
+        "value": {
+          "type": "number",
+          "value": 48
+        }
+      },
+      "id": "cc9d1c96-9f61-42ba-aa30-d88805444a0c"
     },
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",

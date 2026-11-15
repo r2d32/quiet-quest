@@ -200,6 +200,11 @@
       "id": "fa4d1bfe-53f4-4fe7-a2fd-a7addf6118e2"
     },
     {
+      "command": "EVENT_RNG_SEED",
+      "args": {},
+      "id": "71e2c017-c323-4f8b-accd-b1a4bcd4511d"
+    },
+    {
       "command": "EVENT_SWITCH",
       "args": {
         "variable": "L0",
