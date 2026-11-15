@@ -10,7 +10,7 @@
     {
       "command": "EVENT_GROUP",
       "args": {
-        "__collapse": false,
+        "__collapse": true,
         "__label": "Set Other Player Starting Variables"
       },
       "children": {
@@ -37,6 +37,28 @@
       },
       "children": {
         "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "25",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "b67664e9-36df-4141-a077-a7fe0db5a66a"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "37",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "aabdc1ea-e04d-4952-9273-8557f821f19e"
+          },
           {
             "command": "EVENT_SET_VALUE",
             "args": {

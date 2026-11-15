@@ -122,12 +122,11 @@
       "id": "dbb45993-8ffc-499a-b8f3-fe4df802f7a2"
     },
     {
-      "command": "EVENT_ACTOR_SET_SPRITE",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "actorId": "$self$",
-        "spriteSheetId": "33d4a2ff-0302-46e9-bdeb-4d2fc59ca7c1"
+        "customEventId": "a07e57c8-a882-4169-85f1-5e5ba95927d1"
       },
-      "id": "3d6d623f-e0a0-4f36-a0db-02e7ab8e0dd6"
+      "id": "b534aa4a-a07c-461b-8967-36816561edab"
     }
   ],
   "_index": 1
