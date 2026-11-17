@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "346457d6-0499-46d8-a74d-3c5e6c4a90f6",
+  "name": "Rue",
+  "symbol": "sprite_rue",
+  "states": [
+    {
+      "id": "92f603fe-e1df-4ac4-aad9-e5ffcf0a12d7",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "98f46160-70dd-4983-a88a-45113c46e416",
+          "frames": [
+            {
+              "id": "9f996bcf-a6c7-46c7-b5fb-fe4222812f40",
+              "tiles": [
+                {
+                  "id": "148e371c-4eeb-4b3c-95d1-c4c178b41eb9",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "03687555-8f33-4a3f-9f56-74ae60f2d7c9",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a168a612-cd4a-4a83-8f8e-e4ee996ffefc",
+          "frames": [
+            {
+              "id": "71db1687-0c7e-4b08-ab93-329121804e15",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "071aed57-f980-4dad-9d66-e862f8a52be9",
+          "frames": [
+            {
+              "id": "5c403fb9-3315-41e1-be27-6975415c34b8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6571f8b9-4d20-42c6-8850-a3940eb07a2f",
+          "frames": [
+            {
+              "id": "467a65ae-4af1-46e5-b4a9-33da966291b6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b066eebf-e2eb-450f-9ff5-9f392ec686a5",
+          "frames": [
+            {
+              "id": "fe8dc4f1-faf6-47dd-801b-eafab62ab272",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "890d6210-8cab-4d03-b63f-730dbff3a669",
+          "frames": [
+            {
+              "id": "0ae1f334-da57-43da-b933-3ce8e3b9d714",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d0f38fb4-e058-4928-9028-8f85790aa365",
+          "frames": [
+            {
+              "id": "64e98352-e3e1-4111-88e9-43a1c0993fef",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "da8cfe3b-97b6-4c68-9038-8c49d95ed152",
+          "frames": [
+            {
+              "id": "fedb305c-ed31-4fdf-b37d-343bc4f016cf",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Rue.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "b5a36642dcb7ea908d28950b7a89a104c4dd8755"
+}

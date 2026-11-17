@@ -11,44 +11,265 @@
   "height": 2,
   "script": [
     {
-      "command": "EVENT_TEXT",
+      "command": "EVENT_MENU",
       "args": {
-        "text": [
-          "You used an item"
-        ],
-        "__section": "text",
-        "avatarId": "",
-        "minHeight": 4,
-        "maxHeight": 7,
-        "textX": 1,
-        "textY": 1,
-        "textHeight": 5,
-        "position": "bottom",
-        "clearPrevious": true,
-        "showFrame": "true",
-        "speedIn": -1,
-        "speedOut": -1,
-        "closeWhen": "key",
-        "closeButton": "a",
-        "closeDelayTime": 0.5,
-        "closeDelayFrames": 30
+        "variable": "L0",
+        "items": 2,
+        "option1": "Balm x $42$",
+        "option2": "Rue x $44$",
+        "option3": "Cancel",
+        "option4": "",
+        "option5": "",
+        "option6": "",
+        "option7": "",
+        "option8": "",
+        "cancelOnB": true,
+        "layout": "dialogue",
+        "cancelOnLastOption": false
       },
-      "id": "81443984-a8ce-4716-aa30-ea57f810999e"
+      "id": "7f6214d4-7f05-4abc-9283-4ee042460c05"
     },
     {
-      "command": "EVENT_ACTOR_SET_POSITION",
+      "command": "EVENT_SWITCH",
       "args": {
-        "actorId": "$self$",
-        "x": {
-          "type": "number",
-          "value": 1
-        },
-        "y": {
-          "type": "number",
-          "value": 2
-        }
+        "variable": "L0",
+        "choices": 2,
+        "__collapseCase0": false,
+        "__collapseCase1": false,
+        "__collapseCase2": false,
+        "__collapseCase3": false,
+        "__collapseCase4": false,
+        "__collapseCase5": false,
+        "__collapseCase6": false,
+        "__collapseCase7": false,
+        "__collapseCase8": false,
+        "__collapseCase9": false,
+        "__collapseCase10": false,
+        "__collapseCase11": false,
+        "__collapseCase12": false,
+        "__collapseCase13": false,
+        "__collapseCase14": false,
+        "__collapseCase15": false,
+        "__collapseElse": false
       },
-      "id": "d2abe460-962a-4e9f-89a7-2126f8f07662"
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gte",
+                "valueA": {
+                  "type": "variable",
+                  "value": "42"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": true,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "69bd101c-9b3b-4e9e-bf67-9cba4902c20c"
+                  },
+                  "id": "9d9e0283-2c2b-48c7-be0f-2926903297db"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "703e8a29-0417-465d-bce3-00822a4f2e05"
+                  },
+                  "id": "05a0bf31-9093-4837-8211-03def0df59d1"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    }
+                  },
+                  "id": "6f5e53f5-3e1c-4e2b-9618-20998d6a7cd5"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "You don't have\nany Balm!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "a1fd47e7-c343-4d81-989b-20fbd25024f4"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 2
+                    }
+                  },
+                  "id": "89e32ee3-0a9f-4290-bd93-3809eb96f07a"
+                }
+              ]
+            },
+            "id": "a97a1403-9cc8-466d-b7cd-e57000e2f0ed"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gte",
+                "valueA": {
+                  "type": "variable",
+                  "value": "L0"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "922d708c-4317-4795-b207-6db0ae957c33"
+                  },
+                  "id": "2f01b70b-3ce2-4ab1-8e19-cfe8a908b459"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 8
+                    }
+                  },
+                  "id": "19155fab-67d1-4651-8ae2-8712616369f9"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "You don't have\nany Rue!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "bd76ee48-04bd-420d-b341-6f70b9c55205"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 2
+                    }
+                  },
+                  "id": "f90d65d7-bc6e-4332-abee-2d93d4c283f7"
+                }
+              ]
+            },
+            "id": "2a453840-5234-4e1c-9eb2-6c721f7dc1f0"
+          }
+        ],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 1
+              },
+              "y": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "f76c947d-5750-4475-83fb-7ed0f93908cb"
+          }
+        ]
+      },
+      "id": "e54426e8-4df8-4443-bed6-d099afa28ce8"
     }
   ],
   "leaveScript": [],

@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "fce185aa-4408-4637-816a-39cfbdd21c0b",
+  "name": "UI-Font",
+  "symbol": "tileset_ui_font",
+  "width": 16,
+  "height": 3,
+  "imageWidth": 128,
+  "imageHeight": 24,
+  "filename": "UI-Font.png"
+}

@@ -1,0 +1,121 @@
+{
+  "_resourceType": "script",
+  "id": "922d708c-4317-4795-b207-6db0ae957c33",
+  "name": "Use_Item_Rue",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_14",
+  "script": [
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "44",
+        "operation": "sub",
+        "other": "val",
+        "vectorY": "V0",
+        "value": 1,
+        "minValue": "0",
+        "maxValue": "32767",
+        "clamp": true
+      },
+      "id": "f5f81af7-d210-4d72-ae08-b568bd03d4cd"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "6"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "6",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "af87f477-81ec-495e-ac39-bd21d1456f5e"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "25",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "f2357495-e0cb-4852-a39d-34a12899c99e"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You used Rue\nPoison cured!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "855eef2b-d7af-4ae2-a40f-d7a742c77ce6"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You used Rue...\nbut it had \nno effect!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "db452d88-721a-41f8-8cac-e9f18fb4d63c"
+          }
+        ]
+      },
+      "id": "d0ccfa6a-b816-4260-ab74-c39ac3ff1f70"
+    }
+  ]
+}

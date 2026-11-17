@@ -295,6 +295,26 @@
       "id": "aaf1cce0-7739-43c1-afed-b8ebaed97b1e__L0",
       "name": "Local 0",
       "symbol": "var_local_0"
+    },
+    {
+      "id": "42",
+      "name": "Global_Item_Balm",
+      "symbol": "var_global_item_balm"
+    },
+    {
+      "id": "43",
+      "name": "Global_TestRoom_Flags_1",
+      "symbol": "var_global_testroom_flags_1"
+    },
+    {
+      "id": "44",
+      "name": "Global_Item_Rue",
+      "symbol": "var_global_item_rue"
+    },
+    {
+      "id": "75558da2-a621-4f70-aef0-c68ecb15e7aa__L0",
+      "name": "Item_Used",
+      "symbol": "var_item_used"
     }
   ],
   "constants": []

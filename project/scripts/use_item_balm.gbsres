@@ -1,0 +1,98 @@
+{
+  "_resourceType": "script",
+  "id": "69bd101c-9b3b-4e9e-bf67-9cba4902c20c",
+  "name": "Use_Item_Balm",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_13",
+  "script": [
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "42",
+        "operation": "sub",
+        "other": "val",
+        "vectorY": "V0",
+        "value": 1,
+        "minValue": "0",
+        "maxValue": "32767",
+        "clamp": true
+      },
+      "id": "52a1f4fc-ab51-46b6-aff3-56e59d8505a8"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "2",
+        "operation": "add",
+        "other": "val",
+        "vectorY": "V0",
+        "value": 10,
+        "minValue": "0",
+        "maxValue": "32767",
+        "clamp": false
+      },
+      "id": "431de40f-d470-4151-8f3c-605532c5cf61"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "2"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "1"
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "2",
+              "value": {
+                "type": "variable",
+                "value": "1"
+              }
+            },
+            "id": "7bc19ec0-77dd-4fab-97bc-f999f4aa1590"
+          }
+        ],
+        "false": []
+      },
+      "id": "caeaf503-8c72-4e78-879d-5e8f181e2ea5"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "You applied a Balm\nRecovered 10 HP!"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "b6c27a6a-eedf-4839-a4dd-b9b6d9a8cf6b"
+    }
+  ]
+}

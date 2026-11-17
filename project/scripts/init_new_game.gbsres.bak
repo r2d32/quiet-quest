@@ -125,6 +125,17 @@
               }
             },
             "id": "c8fdb2b3-c3d4-4d7d-a67e-ffa9e69fbc98"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "37",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "86857ab4-59f0-46a7-b1ee-8885333ac330"
           }
         ]
       },

@@ -72,7 +72,8 @@
         "timer": 2,
         "duration": 0.2,
         "frames": 30,
-        "__scriptTabs": "end"
+        "__scriptTabs": "end",
+        "__collapse": true
       },
       "children": {
         "script": [
@@ -86,6 +87,50 @@
         ]
       },
       "id": "94cbc3a7-1229-4f5b-9c8d-3e303e5e57e8"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": false,
+        "__label": "Wire Opening the Menu"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "override": true,
+              "__scriptTabs": "press"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "01a4a582-3c14-4939-8133-53a4981c9fc1",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "down",
+                    "fadeSpeed": 1
+                  },
+                  "id": "ea0ebd80-b787-4bf3-8cc0-f79e80945a77"
+                }
+              ]
+            },
+            "id": "6522a63c-a9bf-4876-a7e1-8c31eab18484"
+          }
+        ]
+      },
+      "id": "b53f965f-060f-4eab-83ce-ad2dc9d6e642"
     }
   ],
   "playerHit1Script": [],

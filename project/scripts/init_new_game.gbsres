@@ -136,10 +136,55 @@
               }
             },
             "id": "86857ab4-59f0-46a7-b1ee-8885333ac330"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "44",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "78cb2efc-9855-4437-a4e4-4139e477c419"
           }
         ]
       },
       "id": "838d7204-15be-452c-886f-303d48ef3727"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Item Initialization",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "42",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "aebe2ae4-61f9-49c0-b8aa-dc5c98e3def8"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "43",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "e8ba843c-3b60-4d56-b6ac-dfee20267c24"
+          }
+        ]
+      },
+      "id": "2647242e-946f-4c3a-8c2a-3e3ec18fe3f6"
     }
   ]
 }

@@ -1,0 +1,56 @@
+{
+  "_resourceType": "trigger",
+  "id": "75558da2-a621-4f70-aef0-c68ecb15e7aa",
+  "name": "Use an Item",
+  "prefabId": "",
+  "x": 4,
+  "y": 5,
+  "symbol": "trigger_2",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "You used an item"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "81443984-a8ce-4716-aa30-ea57f810999e"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 1
+        },
+        "y": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "d2abe460-962a-4e9f-89a7-2126f8f07662"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 3
+}

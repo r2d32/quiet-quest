@@ -1,0 +1,125 @@
+{
+  "_resourceType": "actor",
+  "id": "5510203d-8b94-42be-a929-53f877178e30",
+  "name": "Pickup_Rue",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "346457d6-0499-46d8-a74d-3c5e6c4a90f6",
+  "prefabId": "ddf4f472-9b35-430e-92af-5c3fc1d49569",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_7",
+  "script": [
+    {
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "43",
+        "flag1": false,
+        "flag2": true,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": false,
+        "flag9": false,
+        "flag10": false,
+        "flag11": false,
+        "flag12": false,
+        "flag13": false,
+        "flag14": false,
+        "flag15": false,
+        "flag16": false
+      },
+      "id": "0a36ed16-ef9a-4197-8494-18dee8507406"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "44",
+        "value": {
+          "type": "add",
+          "valueA": {
+            "type": "variable",
+            "value": "44"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        }
+      },
+      "id": "257a322d-16ce-4231-9361-b5768434e016"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Found some Rue!"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "6d3c05f2-78ed-493b-9337-fc4199ea43bc"
+    },
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "367ad27a-a99b-4b60-ab7c-968ee734b31d"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "43",
+        "flag": 1,
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "9eaff9b0-2247-44ff-bc7e-83403dd6c1c0"
+          }
+        ],
+        "false": []
+      },
+      "id": "e9679c7f-2c1d-48f0-a941-6354c6145162"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 3,
+  "y": 3,
+  "_index": 1
+}
