@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "4d3b73b4-7089-4f95-8591-d500f3bfaffd",
+  "name": "cooldowns",
+  "symbol": "tileset_cooldowns",
+  "width": 8,
+  "height": 2,
+  "imageWidth": 64,
+  "imageHeight": 16,
+  "filename": "cooldowns.png"
+}

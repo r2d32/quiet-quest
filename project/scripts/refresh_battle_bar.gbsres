@@ -1,0 +1,71 @@
+{
+  "_resourceType": "script",
+  "id": "60141b6a-e13f-45d0-a456-e0777b540c91",
+  "name": "Refresh_Battle_Bar",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_19",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e9f04d88-e90d-43a3-a83b-374d7cf259e9",
+        "__collapse": false,
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 2
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "52"
+        }
+      },
+      "id": "8df993d8-7e8a-4fcf-9d13-d1bf6c7764fa"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e9f04d88-e90d-43a3-a83b-374d7cf259e9",
+        "__collapse": false,
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 5
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "46"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "53"
+        }
+      },
+      "id": "a2ed2855-f6ce-4c50-8f23-ec080ecdc264"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e9f04d88-e90d-43a3-a83b-374d7cf259e9",
+        "__collapse": false,
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 8
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "47"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "54"
+        }
+      },
+      "id": "c2dbe914-755b-415e-99e2-22b7a2cdca37"
+    }
+  ]
+}

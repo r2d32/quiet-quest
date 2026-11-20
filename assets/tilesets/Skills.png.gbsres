@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "addc537c-4765-4836-8800-b785d24c6ac1",
+  "name": "Skills",
+  "symbol": "tileset_abilities",
+  "width": 16,
+  "height": 9,
+  "imageWidth": 128,
+  "imageHeight": 72,
+  "filename": "Skills.png"
+}

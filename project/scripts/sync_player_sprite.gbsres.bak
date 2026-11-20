@@ -6,5 +6,45 @@
   "variables": {},
   "actors": {},
   "symbol": "script_0",
-  "script": []
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_PLAYER_SET_SPRITE",
+            "args": {
+              "spriteSheetId": "b841083a-42a4-4f66-874d-46c798076621"
+            },
+            "id": "35497a4f-c9c4-46f8-8206-d9a570f138e5"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_PLAYER_SET_SPRITE",
+            "args": {
+              "spriteSheetId": "33d4a2ff-0302-46e9-bdeb-4d2fc59ca7c1"
+            },
+            "id": "94d60c88-f853-4a24-884f-64c955e1c4fd"
+          }
+        ]
+      },
+      "id": "03bae1b3-a86b-4f96-a1f5-24860371b0b3"
+    }
+  ]
 }

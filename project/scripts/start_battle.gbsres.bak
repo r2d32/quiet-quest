@@ -1,0 +1,50 @@
+{
+  "_resourceType": "script",
+  "id": "35c43120-d747-42cc-a4e7-b941fdc9ab62",
+  "name": "Start_Battle",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Param_EncounterID",
+      "passByReference": false
+    }
+  },
+  "actors": {},
+  "symbol": "script_6",
+  "script": [
+    {
+      "command": "EVENT_SCENE_PUSH_STATE",
+      "args": {},
+      "id": "185321eb-60fc-44ef-b2bc-c8758bd19252"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "16",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        }
+      },
+      "id": "e6de7747-4df3-4d48-b034-41d78e035c90"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "3ab707fb-d211-4aeb-84e3-715c6c9fcff8",
+        "x": {
+          "type": "number",
+          "value": 1
+        },
+        "y": {
+          "type": "number",
+          "value": 2
+        },
+        "direction": "down",
+        "fadeSpeed": "2"
+      },
+      "id": "be3e98c1-0b2c-4c1e-a129-340e5203a346"
+    }
+  ]
+}

@@ -117,6 +117,16 @@
       "symbol": "var_battle_monster_move_6"
     },
     {
+      "id": "23",
+      "name": "Global_PrevPlayerX",
+      "symbol": "var_global_prevplayerx"
+    },
+    {
+      "id": "24",
+      "name": "Global_PrevPlayerY",
+      "symbol": "var_global_prevplayery"
+    },
+    {
       "id": "25",
       "name": "Global_PoisonSteps",
       "symbol": "var_global_poisonsteps"
@@ -182,9 +192,74 @@
       "symbol": "var_global_player_level"
     },
     {
+      "id": "38",
+      "name": "Temp_CurrX",
+      "symbol": "var_temp_currx"
+    },
+    {
+      "id": "39",
+      "name": "Temp_CurrY",
+      "symbol": "var_temp_curry"
+    },
+    {
       "id": "40",
       "name": "Battle_TurnState",
       "symbol": "var_battle_turnstate"
+    },
+    {
+      "id": "41",
+      "name": "Temp_PoisonDamage",
+      "symbol": "var_temp_poisondamage"
+    },
+    {
+      "id": "42",
+      "name": "Global_Item_Balm",
+      "symbol": "var_global_item_balm"
+    },
+    {
+      "id": "43",
+      "name": "Global_TestRoom_Flags_1",
+      "symbol": "var_global_testroom_flags_1"
+    },
+    {
+      "id": "44",
+      "name": "Global_Item_Rue",
+      "symbol": "var_global_item_rue"
+    },
+    {
+      "id": "45",
+      "name": "Equipped_Skill_Up",
+      "symbol": "var_equipped_skill_up"
+    },
+    {
+      "id": "46",
+      "name": "Equipped_Skill_Down",
+      "symbol": "var_equipped_skill_down"
+    },
+    {
+      "id": "47",
+      "name": "Equipped_Skill_A",
+      "symbol": "var_equipped_skill_a"
+    },
+    {
+      "id": "48",
+      "name": "Equipped_Skill_B",
+      "symbol": "var_equipped_skill_b"
+    },
+    {
+      "id": "49",
+      "name": "Temp0",
+      "symbol": "var_temp0"
+    },
+    {
+      "id": "50",
+      "name": "Temp1",
+      "symbol": "var_temp1"
+    },
+    {
+      "id": "51",
+      "name": "Temp2",
+      "symbol": "var_temp2"
     },
     {
       "id": "8ac89964-779b-44ed-827f-ebc979d7e465__L0",
@@ -267,34 +342,59 @@
       "symbol": "var_local_2"
     },
     {
-      "id": "23",
-      "name": "Global_PrevPlayerX",
-      "symbol": "var_global_prevplayerx"
-    },
-    {
-      "id": "24",
-      "name": "Global_PrevPlayerY",
-      "symbol": "var_global_prevplayery"
-    },
-    {
-      "id": "38",
-      "name": "Temp_CurrX",
-      "symbol": "var_temp_currx"
-    },
-    {
-      "id": "39",
-      "name": "Temp_CurrY",
-      "symbol": "var_temp_curry"
-    },
-    {
-      "id": "41",
-      "name": "Temp_PoisonDamage",
-      "symbol": "var_temp_poisondamage"
-    },
-    {
       "id": "aaf1cce0-7739-43c1-afed-b8ebaed97b1e__L0",
       "name": "Local 0",
       "symbol": "var_local_0"
+    },
+    {
+      "id": "75558da2-a621-4f70-aef0-c68ecb15e7aa__L0",
+      "name": "Item_Used",
+      "symbol": "var_item_used"
+    },
+    {
+      "id": "52",
+      "name": "Skill_CD_Up",
+      "symbol": "var_skill_cd_up"
+    },
+    {
+      "id": "53",
+      "name": "Skill_CD_Down",
+      "symbol": "var_skill_cd_down"
+    },
+    {
+      "id": "54",
+      "name": "Skill_CD_A",
+      "symbol": "var_skill_cd_a"
+    },
+    {
+      "id": "55",
+      "name": "Skill_CD_B",
+      "symbol": "var_skill_cd_b"
+    },
+    {
+      "id": "56",
+      "name": "Battle_HeroBuffs",
+      "symbol": "var_battle_herobuffs"
+    },
+    {
+      "id": "57",
+      "name": "SkillData_Type",
+      "symbol": "var_skilldata_type"
+    },
+    {
+      "id": "58",
+      "name": "SkillData_Cooldown",
+      "symbol": "var_skilldata_cooldown"
+    },
+    {
+      "id": "59",
+      "name": "SkillData_Power",
+      "symbol": "var_skilldata_power"
+    },
+    {
+      "id": "60",
+      "name": "SkillData_BuffID",
+      "symbol": "var_skilldata_buffid"
     }
   ],
   "constants": []

@@ -1058,9 +1058,206 @@
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
         "customEventId": "4e996d8e-41dd-4505-8189-f951bfef7194",
-        "__collapse": true
+        "__collapse": false
       },
       "id": "8c39af90-6eff-4eb5-a140-6f25b637c466"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Tick Down Active Cooldowns"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "52"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "52",
+                    "value": {
+                      "type": "sub",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "52"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    }
+                  },
+                  "id": "c42661fd-380c-4b07-acd4-babaa84b5d8b"
+                }
+              ],
+              "false": []
+            },
+            "id": "a9fb845a-c8dc-4023-9377-ea0de111def4"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "53"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "53",
+                    "value": {
+                      "type": "sub",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "53"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    }
+                  },
+                  "id": "3d9f16cc-23fd-4b7f-a63c-0ec2fbaf542c"
+                }
+              ],
+              "false": []
+            },
+            "id": "7fb1469d-fbc9-4150-8b39-4e8f4482cfbe"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "54"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "54",
+                    "value": {
+                      "type": "sub",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "54"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    }
+                  },
+                  "id": "b1b7dd6f-22d9-423f-ac57-d1ccccca3a9b"
+                }
+              ],
+              "false": []
+            },
+            "id": "5b6d545a-a9e2-46f3-b7cc-4af889fb7cca"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "55"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "55",
+                    "value": {
+                      "type": "sub",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "55"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    }
+                  },
+                  "id": "6db1835f-82c9-4d1a-bd63-2e0dd8e071f2"
+                }
+              ],
+              "false": []
+            },
+            "id": "69f38380-91aa-4d95-893a-6cf649897ed8"
+          }
+        ]
+      },
+      "id": "b09e927d-3957-446e-8b30-9973bee32ecd"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "60141b6a-e13f-45d0-a456-e0777b540c91"
+      },
+      "id": "905a7b0b-dec4-444a-a727-f34347a62f73"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "40",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "40a13dc6-75ea-46d8-b78d-4a2142151418"
     },
     {
       "command": "EVENT_ACTOR_SET_POSITION",
@@ -1068,11 +1265,11 @@
         "actorId": "$self$",
         "x": {
           "type": "number",
-          "value": 1
+          "value": 0
         },
         "y": {
           "type": "number",
-          "value": 2
+          "value": 0
         },
         "__collapse": false
       },

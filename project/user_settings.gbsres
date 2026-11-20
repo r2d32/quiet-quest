@@ -1,14 +1,14 @@
 {
   "_resourceType": "settings",
-  "worldScrollX": 677.0833129882812,
-  "worldScrollY": 0,
-  "zoom": 106.67668628692627,
+  "worldScrollX": 138.88888549804688,
+  "worldScrollY": 1.4467592239379883,
+  "zoom": 68.9390167593956,
   "navigatorSplitSizes": [
-    30,
-    205,
     205,
     30,
-    106
+    281,
+    30,
+    30
   ],
   "showNavigator": true,
   "showCollisions": true,
@@ -22,7 +22,9 @@
     "EVENT_SET_VALUE",
     "EVENT_VARIABLE_MATH",
     "EVENT_CALL_CUSTOM_EVENT",
-    "EVENT_IF"
+    "EVENT_IF",
+    "EVENT_VARIABLE_MATH_EVALUATE",
+    "EVENT_GROUP"
   ],
   "debuggerEnabled": true,
   "debuggerScriptType": "editor",

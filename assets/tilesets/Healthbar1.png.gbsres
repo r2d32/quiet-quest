@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "65a1df80-c227-47be-b3bf-359274ef9023",
+  "name": "Healthbar1",
+  "symbol": "tileset_healthbar1",
+  "width": 9,
+  "height": 1,
+  "imageWidth": 72,
+  "imageHeight": 8,
+  "filename": "Healthbar1.png"
+}

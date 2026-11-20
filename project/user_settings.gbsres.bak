@@ -1,14 +1,14 @@
 {
   "_resourceType": "settings",
-  "worldScrollX": 459.49072265625,
-  "worldScrollY": 0,
-  "zoom": 103.73672829963562,
+  "worldScrollX": 520.254638671875,
+  "worldScrollY": 82.46527862548828,
+  "zoom": 147.86521220207214,
   "navigatorSplitSizes": [
-    89,
-    30,
     205,
     30,
-    221
+    106,
+    30,
+    205
   ],
   "showNavigator": true,
   "showCollisions": true,
@@ -18,7 +18,13 @@
   "showCollisionSlopeTiles": false,
   "favoriteEvents": [
     "EVENT_TEXT",
-    "EVENT_SWITCH_SCENE"
+    "EVENT_SWITCH_SCENE",
+    "EVENT_SET_VALUE",
+    "EVENT_VARIABLE_MATH",
+    "EVENT_CALL_CUSTOM_EVENT",
+    "EVENT_IF",
+    "EVENT_VARIABLE_MATH_EVALUATE",
+    "EVENT_GROUP"
   ],
   "debuggerEnabled": true,
   "debuggerScriptType": "editor",

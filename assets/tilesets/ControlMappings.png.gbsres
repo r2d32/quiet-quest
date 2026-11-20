@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "ccf3f82e-661f-4d8b-a13e-c27c67c304ff",
+  "name": "ControlMappings",
+  "symbol": "tileset_controlmappings",
+  "width": 8,
+  "height": 1,
+  "imageWidth": 64,
+  "imageHeight": 8,
+  "filename": "ControlMappings.png"
+}
