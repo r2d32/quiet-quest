@@ -395,7 +395,101 @@
       "id": "60",
       "name": "SkillData_BuffID",
       "symbol": "var_skilldata_buffid"
+    },
+    {
+      "id": "61",
+      "name": "HitEffect_Timer",
+      "symbol": "var_hiteffect_timer"
+    },
+    {
+      "id": "62",
+      "name": "Popup_Timer",
+      "symbol": "var_popup_timer"
+    },
+    {
+      "id": "63",
+      "name": "Popup_Y",
+      "symbol": "var_popup_y"
     }
   ],
-  "constants": []
+  "constants": [
+    {
+      "id": "ff92bed3-e309-42e1-a5c9-6c89f93ae296",
+      "name": "ENEMY_FX_X",
+      "symbol": "const_enemy_fx_x_0",
+      "value": 14
+    },
+    {
+      "id": "5499551e-829f-4812-ba35-f16b52ea54c0",
+      "name": "ENEMY_FX_Y",
+      "symbol": "const_enemy_fx_y",
+      "value": 2
+    },
+    {
+      "id": "f32ff547-345d-43dc-8d83-a9f8f1e4f844",
+      "name": "HERO_FX_X",
+      "symbol": "const_hero_fx_x_0",
+      "value": 4
+    },
+    {
+      "id": "c3687972-a87e-4e7d-bb0c-97d5cb0b9284",
+      "name": "HERO_FX_Y",
+      "symbol": "const_hero_fx_y",
+      "value": 7
+    },
+    {
+      "id": "e2c533c2-259d-4998-8b5e-cce84c8a7e17",
+      "name": "ENEMY_POPUP_X",
+      "symbol": "const_enemy_popup_x_0",
+      "value": 10
+    },
+    {
+      "id": "3ff13c47-c5f1-40d0-88d0-129d92f7bca4",
+      "name": "ENEMY_POPUP_Y",
+      "symbol": "const_enemy_popup_y",
+      "value": 4
+    },
+    {
+      "id": "9c4bec48-0276-44de-9f76-bd2424f34f0e",
+      "name": "ENEMY_MISS_X",
+      "symbol": "const_enemy_miss_x_0",
+      "value": 14
+    },
+    {
+      "id": "304c7006-de75-4cfe-a1e4-9f6ea7246256",
+      "name": "HERO_POPUP_X",
+      "symbol": "const_hero_popup_x_0",
+      "value": 4
+    },
+    {
+      "id": "f20d5651-8d18-4a7c-8120-9a73b5e26425",
+      "name": "HERO_POPUP_Y",
+      "symbol": "const_hero_popup_y",
+      "value": 8
+    },
+    {
+      "id": "fda0eae7-1600-45e9-8726-2c27204567fb",
+      "name": "CFG_SLASH_STEP",
+      "symbol": "const_cfg_slash_step_0",
+      "value": 4
+    },
+    {
+      "id": "bdff3125-0297-45cf-a04d-fbbdb0f54a3c",
+      "name": "CFG_POPUP_RISE",
+      "symbol": "const_cfg_popup_rise_0",
+      "value": 16
+    },
+    {
+      "id": "782f546b-9f94-4cb9-805c-1bb885cc2c49",
+      "name": "CFG_POPUP_HOLD",
+      "symbol": "const_cfg_popup_hold",
+      "value": 16
+    },
+    {
+      "id": "2bd18926-5439-4899-823e-bf6b3dda89d8",
+      "name": "CFG_SHAKE_MAG",
+      "symbol": "const_cfg_shake_mag",
+      "value": 4
+    }
+  ]
 }

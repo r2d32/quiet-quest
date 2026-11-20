@@ -812,7 +812,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Float Animation",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -830,7 +830,7 @@
               "variable": "62",
               "value": {
                 "type": "number",
-                "value": 16
+                "value": 32
               }
             },
             "id": "de14ea88-9351-4f1c-bcc4-3ee32c34913d"

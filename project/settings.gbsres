@@ -3,7 +3,7 @@
   "startSceneId": "aaf1cce0-7739-43c1-afed-b8ebaed97b1e",
   "startX": 7,
   "startY": 4,
-  "startMoveSpeed": 1,
+  "startMoveSpeed": 2,
   "startAnimSpeed": 7,
   "startDirection": "up",
   "showCollisionExtraTiles": false,

@@ -56,7 +56,7 @@
                 },
                 "valueB": {
                   "type": "number",
-                  "value": 8
+                  "value": 16
                 }
               },
               "__collapseElse": true

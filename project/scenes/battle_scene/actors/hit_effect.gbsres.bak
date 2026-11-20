@@ -77,11 +77,15 @@
               "__collapseElse": false,
               "value0": {
                 "type": "number",
-                "value": 4
+                "value": 8
               },
               "value2": {
                 "type": "number",
                 "value": 0
+              },
+              "value1": {
+                "type": "number",
+                "value": 4
               }
             },
             "children": {
